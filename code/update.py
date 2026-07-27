@@ -2,50 +2,178 @@ import argparse
 import itertools
 import json
 import pathlib
+import traceback
 
-# Testing mode processes only this many items and writes to its own designated file
-# (`derivatives/testing.jsonl`), leaving the real cache untouched.
-_TESTING_LIMIT = 10
-_CACHE_FILE_NAME = "<cache_name>.jsonl"
+import dandi.dandiapi
+import spikeinterface.extractors
+
+# The only qualification requirement: at least one ElectricalSeries in the acquisition
+# submodule with a sampling rate above this threshold.
+_MIN_RATE_HZ = 10_000
+
+_CACHE_FILE_NAME = "qualifying_lfp_content_ids.jsonl"
 _TESTING_FILE_NAME = "testing.jsonl"
+_TESTING_LIMIT = 10
 
 
-def _run(base_directory: pathlib.Path, testing: bool) -> None:
-    # TODO: implement the update logic for this cache.
-    # Read the inputs, compute the cache, and write the result into
-    # `base_directory / "derivatives"` as JSON Lines (one JSON value per line).
-    #
-    # The setup checklist — input modes, whether to keep `--testing`, and lessons for
-    # fetching inputs from the public DANDI S3 bucket — lives in the plain-Markdown
-    # skills .claude/skills/setup-cache/SKILL.md and
-    # .claude/skills/dandi-s3-network-inputs/SKILL.md.
+def _is_nwb_file(path: str) -> bool:
+    """Whether a path points to an NWB asset, which ends in `.nwb` (HDF5) or `.nwb.zarr` (Zarr)."""
+    suffixes = pathlib.Path(path).suffixes
+    return suffixes[-2:] == [".nwb", ".zarr"] or suffixes[-1:] == [".nwb"]
 
-    records: list = []
 
-    if testing:
-        # Testing run: keep only the first few items, so the run is fast but still
-        # exercises the real processing logic end to end.
-        records = list(itertools.islice(records, _TESTING_LIMIT))
+def _load_ids(file_path: pathlib.Path) -> set:
+    """Load a set of IDs from a JSONL file, returning an empty set if the file does not exist."""
+    if not file_path.exists():
+        return set()
+
+    with file_path.open(mode="r") as file_stream:
+        return {json.loads(line) for line in file_stream if line.strip()}
+
+
+# The `derivatives` dataset is a persistent DataLad dataset: this log accumulates across every
+# run forever (entries are never otherwise removed), and GitHub hard-rejects any single blob over
+# 100 MB. Keep the log comfortably under that limit by dropping the oldest entries once it grows
+# past this cap.
+_MAX_LOG_FILE_SIZE_BYTES = 80_000_000
+
+
+def _log_error(log_file_path: pathlib.Path, message: str) -> None:
+    """Append a single error report to the given error log, separated by a blank line.
+
+    If the file has grown past `_MAX_LOG_FILE_SIZE_BYTES`, the oldest entries are dropped first so
+    the file never approaches GitHub's 100 MB per-file limit.
+    """
+    with log_file_path.open(mode="a") as file_stream:
+        file_stream.write(f"{message}\n\n")
+
+    if log_file_path.stat().st_size <= _MAX_LOG_FILE_SIZE_BYTES:
+        return
+
+    with log_file_path.open(mode="rb") as file_stream:
+        file_stream.seek(-_MAX_LOG_FILE_SIZE_BYTES, 2)
+        tail = file_stream.read()
+
+    # Realign to the start of the next whole entry so no partial entry is kept.
+    next_entry_offset = tail.find(b"\n\n")
+    if next_entry_offset != -1:
+        tail = tail[next_entry_offset + 2 :]
+
+    with log_file_path.open(mode="wb") as file_stream:
+        file_stream.write(tail)
+
+
+def _nwb_file_qualifies(s3_url: str) -> bool:
+    """Whether the NWB file has at least one acquisition ElectricalSeries above the rate threshold."""
+    electrical_series_paths = spikeinterface.extractors.NwbRecordingExtractor.fetch_available_electrical_series_paths(
+        file_path=s3_url, stream_mode="remfile"
+    )
+    acquisition_series_paths = [
+        electrical_series_path
+        for electrical_series_path in electrical_series_paths
+        if electrical_series_path.startswith("acquisition/")
+    ]
+
+    for electrical_series_path in acquisition_series_paths:
+        extractor = spikeinterface.extractors.NwbRecordingExtractor(
+            file_path=s3_url, stream_mode="remfile", electrical_series_path=electrical_series_path
+        )
+        if extractor.get_sampling_frequency() > _MIN_RATE_HZ:
+            return True
+
+    return False
+
+
+def _run(base_directory: pathlib.Path, testing: bool, limit: int | None) -> None:
+    submodule_file_path = (
+        base_directory
+        / "sourcedata"
+        / "content-id-to-usage-dandiset-path"
+        / "derivatives"
+        / "content_id_to_usage_dandiset_path.jsonl"
+    )
+    content_id_to_dandiset_path = {}
+    with submodule_file_path.open(mode="r") as file_stream:
+        for line in file_stream:
+            if line.strip():
+                content_id_to_dandiset_path.update(json.loads(line))
 
     derivatives_directory = base_directory / "derivatives"
     derivatives_directory.mkdir(parents=True, exist_ok=True)
+    logs_directory = base_directory / "logs"
+    logs_directory.mkdir(parents=True, exist_ok=True)
 
-    # Testing runs write to their own designated file, so the real cache is never touched.
-    output_file_path = derivatives_directory / (_TESTING_FILE_NAME if testing else _CACHE_FILE_NAME)
+    # Testing runs read and write their own designated files, so the real cache and its
+    # bookkeeping are never touched.
+    cache_file_name = _TESTING_FILE_NAME if testing else _CACHE_FILE_NAME
+    processed_ids_file_name = "testing_processed_ids.jsonl" if testing else "processed_ids.jsonl"
+    error_ids_file_name = "testing_error_ids.jsonl" if testing else "error_ids.jsonl"
+    error_log_file_name = "testing_errors.txt" if testing else "errors.txt"
+
+    output_file_path = derivatives_directory / cache_file_name
+    processed_ids_file_path = derivatives_directory / processed_ids_file_name
+    error_ids_file_path = derivatives_directory / error_ids_file_name
+    error_log_file_path = logs_directory / error_log_file_name
+
+    qualifying_content_ids = _load_ids(output_file_path)
+    processed_ids = _load_ids(processed_ids_file_path)
+    error_ids = _load_ids(error_ids_file_path)
+
+    content_ids_to_process = {
+        content_id
+        for content_id, dandiset_path in content_id_to_dandiset_path.items()
+        if content_id not in processed_ids
+        and content_id not in error_ids
+        and _is_nwb_file(next(iter(dandiset_path.values())))
+    }
+
+    run_limit = _TESTING_LIMIT if testing else limit
+    content_ids_to_process = set(itertools.islice(content_ids_to_process, run_limit))
+
+    client = dandi.dandiapi.DandiAPIClient()  # Run tokenless to ensure only public dandisets are accessed
+    for content_id in content_ids_to_process:
+        dandiset_id = first_path = s3_url = None
+        try:
+            dandiset_id, first_path = next(iter(content_id_to_dandiset_path[content_id].items()))
+            dandiset = client.get_dandiset(dandiset_id=dandiset_id)
+            asset = dandiset.get_asset_by_path(path=first_path)
+            s3_url = asset.get_content_url(follow_redirects=1, strip_query=True)
+            qualifies = _nwb_file_qualifies(s3_url=s3_url)
+        except Exception as exception:
+            _log_error(
+                log_file_path=error_log_file_path,
+                message=(
+                    f"Error while processing `{content_id=}` "
+                    f"(dandiset ID {dandiset_id}, path {first_path}, URL {s3_url})!\n\n"
+                    f"{type(exception)}:{str(exception)}\n\n"
+                    f"{traceback.format_exc()}"
+                ),
+            )
+            error_ids.add(content_id)
+            continue
+
+        if qualifies:
+            qualifying_content_ids.add(content_id)
+        processed_ids.add(content_id)
+
     with output_file_path.open(mode="w") as file_stream:
-        file_stream.writelines(f"{json.dumps(record)}\n" for record in records)
+        file_stream.writelines(f"{json.dumps(content_id)}\n" for content_id in sorted(qualifying_content_ids))
+    with processed_ids_file_path.open(mode="w") as file_stream:
+        file_stream.writelines(f"{json.dumps(content_id)}\n" for content_id in sorted(processed_ids))
+    with error_ids_file_path.open(mode="w") as file_stream:
+        file_stream.writelines(f"{json.dumps(content_id)}\n" for content_id in sorted(error_ids))
 
 
 if __name__ == "__main__":
     default_base_directory = pathlib.Path(__file__).parent.parent
 
-    parser = argparse.ArgumentParser(description="Update the <cache-name> DANDI cache.")
+    parser = argparse.ArgumentParser(description="Update the qualifying-lfp-content-ids DANDI cache.")
     parser.add_argument(
         "--base-directory",
         type=pathlib.Path,
         default=default_base_directory,
         help=(
-            "The directory containing the `sourcedata` and `derivatives` directories. "
+            "The directory containing the `sourcedata`, `derivatives`, and `logs` directories. "
             "Set to the mounted dataset path when run inside the pipeline container; "
             "defaults to the repository root."
         ),
@@ -59,6 +187,12 @@ if __name__ == "__main__":
             "untouched. Omit for a complete update."
         ),
     )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=2_000,
+        help="The number of new content IDs to process in this run. Ignored in testing mode.",
+    )
     args = parser.parse_args()
 
-    _run(base_directory=args.base_directory, testing=args.testing)
+    _run(base_directory=args.base_directory, testing=args.testing, limit=args.limit)
