@@ -27,6 +27,8 @@
 #   TESTING      Set to "true" to run update.py in testing mode: it processes only a few
 #                items and reads/writes derivatives/testing.jsonl, leaving the real cache
 #                untouched. Empty/unset means a complete run.
+#   LIMIT        Number of new content IDs to process in a complete run (default: 2000).
+#                Ignored in testing mode.
 #   GITHUB_SHA   Recorded in the provenance message to link results to the code commit.
 #   RUNNER_TEMP  Scratch directory for the working clones (default: /tmp).
 set -euo pipefail
@@ -35,6 +37,7 @@ set -euo pipefail
 : "${WORKSPACE:?WORKSPACE must be set}"
 : "${IMAGE:?IMAGE must be set}"
 TESTING="${TESTING:-}"
+LIMIT="${LIMIT:-2000}"
 GITHUB_SHA="${GITHUB_SHA:-unknown}"
 
 # Only pass --testing when requested, so a normal run processes the full cache.
@@ -46,13 +49,11 @@ fi
 BOT_NAME="github-actions[bot]"
 BOT_EMAIL="github-actions[bot]@users.noreply.github.com"
 
-# TODO: pick this cache's input mode — upstream DataLad dataset, local `sourcedata`
-# directory, or first-in-chain network fetch. The three modes, and how these variables
-# drive them, are documented in .claude/skills/setup-cache/SKILL.md (step 2). Leave
-# INPUT_SUBDATASET_URL empty for the two non-subdataset modes; the subdataset handling
-# below is then skipped.
-INPUT_SUBDATASET_URL=""  # e.g. https://github.com/dandi-cache/<input-dataset-name>.git
-INPUT_SUBDATASET_PATH="sourcedata/<input-dataset-name>"
+# Input mode: upstream DataLad dataset. content-id-to-usage-dandiset-path maps each content
+# ID to the dandiset(s)/path(s) it is used under, which is all this cache needs to resolve an
+# asset and check its acquisition ElectricalSeries rates.
+INPUT_SUBDATASET_URL="https://github.com/dandi-cache/content-id-to-usage-dandiset-path.git"
+INPUT_SUBDATASET_PATH="sourcedata/content-id-to-usage-dandiset-path"
 INPUT_SUBDATASET_BRANCH="derivatives"
 
 DS="${RUNNER_TEMP:-/tmp}/derivatives-dataset"
@@ -162,8 +163,8 @@ fi
 datalad containers-run -n pipeline --explicit \
   "${RUN_INPUT_ARGS[@]}" \
   --output derivatives \
-  -m "Update <cache-name> (code @ ${GITHUB_SHA}; image ${DIGEST})" \
-  "python /code/update.py --base-directory /tmp ${TESTING_ARG}"
+  -m "Update qualifying-lfp-content-ids (code @ ${GITHUB_SHA}; image ${DIGEST})" \
+  "python /code/update.py --base-directory /tmp --limit ${LIMIT} ${TESTING_ARG}"
 
 # Publish the full results to the `derivatives` branch.
 git -C "${DS}" push "${REPO_URL}" HEAD:derivatives
@@ -174,13 +175,13 @@ git -C "${DS}" push "${REPO_URL}" HEAD:derivatives
 # complete run).
 uv run --project "${WORKSPACE}/envs" python "${WORKSPACE}/code/compress.py" --base-directory "${DS}"
 mkdir -p "${DISTDIR}/derivatives"
-if [ -f "${DS}/derivatives/<cache_name>.jsonl.gz" ]; then
-  cp "${DS}/derivatives/<cache_name>.jsonl.gz" "${DISTDIR}/derivatives/"
+if [ -f "${DS}/derivatives/qualifying_lfp_content_ids.jsonl.gz" ]; then
+  cp "${DS}/derivatives/qualifying_lfp_content_ids.jsonl.gz" "${DISTDIR}/derivatives/"
 fi
 cp "${WORKSPACE}/dataset_description.json" "${DISTDIR}/dataset_description.json"
 git -C "${DISTDIR}" init -q -b dist
 git -C "${DISTDIR}" config user.name "${BOT_NAME}"
 git -C "${DISTDIR}" config user.email "${BOT_EMAIL}"
 git -C "${DISTDIR}" add dataset_description.json derivatives
-git -C "${DISTDIR}" commit -q -m "Publish <cache-name>"
+git -C "${DISTDIR}" commit -q -m "Publish qualifying-lfp-content-ids"
 git -C "${DISTDIR}" push -f "${REPO_URL}" dist:dist
