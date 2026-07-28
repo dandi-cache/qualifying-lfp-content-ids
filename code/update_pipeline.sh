@@ -75,23 +75,48 @@ git config --global user.email "${BOT_EMAIL}"
 # worktree, so subdataset registration fails there.
 rm -rf "${DS}" "${DISTDIR}"
 
-# Reuse the persistent `derivatives` dataset branch, or bootstrap a new one.
-if git ls-remote --heads "${REPO_URL}" derivatives | grep -q refs/heads/derivatives; then
-  echo "Reusing the existing 'derivatives' dataset branch."
-  git clone --branch derivatives --single-branch "${REPO_URL}" "${DS}"
-  git -C "${DS}" submodule update --init --recursive "${INPUT_SUBDATASET_PATH}"
-else
-  echo "Bootstrapping a new 'derivatives' DataLad dataset."
-  datalad create --no-annex "${DS}"
+# Clone the input subdataset into the (already-`cd`-free) dataset root and pin it to the
+# branch that carries its published data, recording that branch in `.gitmodules` so
+# `submodule update --remote` follows it. Shared by both the bootstrap path and the
+# migration path below, since both need to register the input subdataset from scratch.
+add_input_subdataset() {
   datalad clone -d "${DS}" "${INPUT_SUBDATASET_URL}" "${DS}/${INPUT_SUBDATASET_PATH}"
-  # Track the input dataset's published-data branch (its default branch holds only code),
-  # and record that branch in `.gitmodules` so `submodule update --remote` follows it.
   git -C "${DS}/${INPUT_SUBDATASET_PATH}" fetch origin "${INPUT_SUBDATASET_BRANCH}"
   git -C "${DS}/${INPUT_SUBDATASET_PATH}" checkout -B "${INPUT_SUBDATASET_BRANCH}" "origin/${INPUT_SUBDATASET_BRANCH}"
   git -C "${DS}" config -f .gitmodules "submodule.${INPUT_SUBDATASET_PATH}.branch" "${INPUT_SUBDATASET_BRANCH}"
   # Pull in the nested content-id-to-nwb-file subdataset that content-id-to-valid-nwb-file
   # itself depends on, so this cache can read it too.
   git -C "${DS}/${INPUT_SUBDATASET_PATH}" submodule update --init --recursive
+}
+
+# Reuse the persistent `derivatives` dataset branch, or bootstrap a new one.
+if git ls-remote --heads "${REPO_URL}" derivatives | grep -q refs/heads/derivatives; then
+  echo "Reusing the existing 'derivatives' dataset branch."
+  git clone --branch derivatives --single-branch "${REPO_URL}" "${DS}"
+  if git -C "${DS}" config -f .gitmodules --get "submodule.${INPUT_SUBDATASET_PATH}.url" >/dev/null 2>&1; then
+    git -C "${DS}" submodule update --init --recursive "${INPUT_SUBDATASET_PATH}"
+  else
+    # The persistent dataset predates the current INPUT_SUBDATASET_PATH/URL (e.g. the code's
+    # input dataset was swapped out since this dataset was bootstrapped): drop whatever stale
+    # input subdataset(s) it still has registered and register the current one from scratch.
+    echo "Migrating derivatives dataset to input subdataset '${INPUT_SUBDATASET_PATH}'."
+    STALE_PATHS=""
+    if [ -f "${DS}/.gitmodules" ]; then
+      STALE_PATHS=$(git -C "${DS}" config -f .gitmodules --get-regexp '\.path$' | awk '{print $2}')
+    fi
+    for stale_path in ${STALE_PATHS}; do
+      echo "Removing stale input subdataset '${stale_path}'."
+      git -C "${DS}" submodule deinit -f "${stale_path}"
+      git -C "${DS}" rm -f "${stale_path}"
+      rm -rf "${DS}/.git/modules/${stale_path}"
+    done
+    add_input_subdataset
+    datalad save -d "${DS}" -m "Migrate input subdataset to ${INPUT_SUBDATASET_PATH}"
+  fi
+else
+  echo "Bootstrapping a new 'derivatives' DataLad dataset."
+  datalad create --no-annex "${DS}"
+  add_input_subdataset
   datalad save -d "${DS}" -m "Initialize derivatives dataset"
 fi
 
