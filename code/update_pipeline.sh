@@ -49,11 +49,16 @@ fi
 BOT_NAME="github-actions[bot]"
 BOT_EMAIL="github-actions[bot]@users.noreply.github.com"
 
-# Input mode: upstream DataLad dataset. content-id-to-usage-dandiset-path maps each content
-# ID to the dandiset(s)/path(s) it is used under, which is all this cache needs to resolve an
-# asset and check its acquisition ElectricalSeries rates.
-INPUT_SUBDATASET_URL="https://github.com/dandi-cache/content-id-to-usage-dandiset-path.git"
-INPUT_SUBDATASET_PATH="sourcedata/content-id-to-usage-dandiset-path"
+# Input mode: a single upstream DataLad dataset, registered as an input subdataset and
+# pinned via `--input` in the provenance of every run. content-id-to-valid-nwb-file marks
+# which content IDs are already known to open as valid NWB files, so this cache skips (for
+# now) any content ID known to be invalid rather than spending a network round trip streaming
+# an asset that would only fail. It in turn carries its own `content-id-to-nwb-file` input as
+# a nested subdataset (mapping each content ID to the dandiset ID/path of its NWB asset), which
+# is why every submodule update below is `--recursive`: that nested subdataset is what this
+# cache actually reads to resolve an asset and check its acquisition ElectricalSeries rates.
+INPUT_SUBDATASET_URL="https://github.com/dandi-cache/content-id-to-valid-nwb-file.git"
+INPUT_SUBDATASET_PATH="sourcedata/content-id-to-valid-nwb-file"
 INPUT_SUBDATASET_BRANCH="derivatives"
 
 DS="${RUNNER_TEMP:-/tmp}/derivatives-dataset"
@@ -74,20 +79,19 @@ rm -rf "${DS}" "${DISTDIR}"
 if git ls-remote --heads "${REPO_URL}" derivatives | grep -q refs/heads/derivatives; then
   echo "Reusing the existing 'derivatives' dataset branch."
   git clone --branch derivatives --single-branch "${REPO_URL}" "${DS}"
-  if [ -n "${INPUT_SUBDATASET_URL}" ]; then
-    git -C "${DS}" submodule update --init "${INPUT_SUBDATASET_PATH}"
-  fi
+  git -C "${DS}" submodule update --init --recursive "${INPUT_SUBDATASET_PATH}"
 else
   echo "Bootstrapping a new 'derivatives' DataLad dataset."
   datalad create --no-annex "${DS}"
-  if [ -n "${INPUT_SUBDATASET_URL}" ]; then
-    datalad clone -d "${DS}" "${INPUT_SUBDATASET_URL}" "${DS}/${INPUT_SUBDATASET_PATH}"
-    # Track the input dataset's published-data branch (its default branch holds only code),
-    # and record that branch in `.gitmodules` so `submodule update --remote` follows it.
-    git -C "${DS}/${INPUT_SUBDATASET_PATH}" fetch origin "${INPUT_SUBDATASET_BRANCH}"
-    git -C "${DS}/${INPUT_SUBDATASET_PATH}" checkout -B "${INPUT_SUBDATASET_BRANCH}" "origin/${INPUT_SUBDATASET_BRANCH}"
-    git -C "${DS}" config -f .gitmodules "submodule.${INPUT_SUBDATASET_PATH}.branch" "${INPUT_SUBDATASET_BRANCH}"
-  fi
+  datalad clone -d "${DS}" "${INPUT_SUBDATASET_URL}" "${DS}/${INPUT_SUBDATASET_PATH}"
+  # Track the input dataset's published-data branch (its default branch holds only code),
+  # and record that branch in `.gitmodules` so `submodule update --remote` follows it.
+  git -C "${DS}/${INPUT_SUBDATASET_PATH}" fetch origin "${INPUT_SUBDATASET_BRANCH}"
+  git -C "${DS}/${INPUT_SUBDATASET_PATH}" checkout -B "${INPUT_SUBDATASET_BRANCH}" "origin/${INPUT_SUBDATASET_BRANCH}"
+  git -C "${DS}" config -f .gitmodules "submodule.${INPUT_SUBDATASET_PATH}.branch" "${INPUT_SUBDATASET_BRANCH}"
+  # Pull in the nested content-id-to-nwb-file subdataset that content-id-to-valid-nwb-file
+  # itself depends on, so this cache can read it too.
+  git -C "${DS}/${INPUT_SUBDATASET_PATH}" submodule update --init --recursive
   datalad save -d "${DS}" -m "Initialize derivatives dataset"
 fi
 
@@ -114,10 +118,14 @@ datalad save -m "Update dataset_description.json" dataset_description.json
 # the given path, and since that path is itself a subdataset mount point, it silently targets
 # the (clean, nothing-to-save) subdataset instead of registering the new commit in the
 # superdataset -- exiting 0 without saving anything.
-if [ -n "${INPUT_SUBDATASET_URL}" ]; then
-  git submodule update --init --remote "${INPUT_SUBDATASET_PATH}"
-  datalad save -d . -m "Update input subdataset to latest" "${INPUT_SUBDATASET_PATH}"
-fi
+#
+# `--remote` only advances the immediate submodule; the nested content-id-to-nwb-file
+# subdataset inside it is pinned to whatever commit content-id-to-valid-nwb-file recorded, so
+# the follow-up `--recursive` update (with no `--remote`) checks that nested subdataset out to
+# match, without independently advancing it past what content-id-to-valid-nwb-file pinned.
+git submodule update --init --remote "${INPUT_SUBDATASET_PATH}"
+git -C "${INPUT_SUBDATASET_PATH}" submodule update --init --recursive
+datalad save -d . -m "Update input subdataset to latest" "${INPUT_SUBDATASET_PATH}"
 
 # Pin the published image digest and register it as a container. Only the digest is stored
 # (a small text file), so the dataset stays annex-free; ghcr holds the image bytes.
@@ -152,16 +160,10 @@ fi
 # datalad from clearing the outputs first, which is required when the outputs are also prior
 # state (input) of the next incremental run.
 #
-# Input provenance depends on the input mode selected above: with an INPUT_SUBDATASET_URL the
-# subdataset is pinned via `--input`; in the first-in-chain / no-input-dataset mode there is
-# nothing to pin, so no `--input` is declared and the container fetches its own inputs over
-# the network (which therefore must be reachable from inside the container at run time).
-RUN_INPUT_ARGS=()
-if [ -n "${INPUT_SUBDATASET_URL}" ]; then
-  RUN_INPUT_ARGS=(--input "${INPUT_SUBDATASET_PATH}")
-fi
+# The input subdataset is pinned via `--input` so the provenance records the exact commit it
+# was read from.
 datalad containers-run -n pipeline --explicit \
-  "${RUN_INPUT_ARGS[@]}" \
+  --input "${INPUT_SUBDATASET_PATH}" \
   --output derivatives \
   -m "Update qualifying-lfp-content-ids (code @ ${GITHUB_SHA}; image ${DIGEST})" \
   "python /code/update.py --base-directory /tmp --limit ${LIMIT} ${TESTING_ARG}"

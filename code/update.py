@@ -16,12 +16,6 @@ _TESTING_FILE_NAME = "testing.jsonl"
 _TESTING_LIMIT = 10
 
 
-def _is_nwb_file(path: str) -> bool:
-    """Whether a path points to an NWB asset, which ends in `.nwb` (HDF5) or `.nwb.zarr` (Zarr)."""
-    suffixes = pathlib.Path(path).suffixes
-    return suffixes[-2:] == [".nwb", ".zarr"] or suffixes[-1:] == [".nwb"]
-
-
 def _load_ids(file_path: pathlib.Path) -> set:
     """Load a set of IDs from a JSONL file, returning an empty set if the file does not exist."""
     if not file_path.exists():
@@ -41,6 +35,19 @@ def _load_results(file_path: pathlib.Path) -> dict:
             content_id: qualifies
             for content_id, qualifies in (json.loads(line) for line in file_stream if line.strip())
         }
+
+
+def _load_record_map(file_path: pathlib.Path) -> dict:
+    """Load a mapping from a JSONL file of one `{content_id: value}` object per line."""
+    if not file_path.exists():
+        return {}
+
+    records: dict = {}
+    with file_path.open(mode="r") as file_stream:
+        for line in file_stream:
+            if line.strip():
+                records.update(json.loads(line))
+    return records
 
 
 # The `derivatives` dataset is a persistent DataLad dataset: this log accumulates across every
@@ -97,12 +104,24 @@ def _nwb_file_qualifies(s3_url: str) -> bool:
 
 
 def _run(base_directory: pathlib.Path, testing: bool, limit: int | None) -> None:
+    valid_nwb_file_directory = base_directory / "sourcedata" / "content-id-to-valid-nwb-file"
+
+    # content-id-to-valid-nwb-file marks which content IDs are already known to open as valid
+    # NWB files, so this cache skips (for now) any content ID known to be invalid rather than
+    # spending a network round trip streaming an asset that would only fail.
+    valid_nwb_file_path = valid_nwb_file_directory / "derivatives" / "content_id_to_valid_nwb_file.jsonl"
+    content_id_to_valid_nwb_file = _load_record_map(file_path=valid_nwb_file_path)
+
+    # content-id-to-nwb-file maps each content ID to the dandiset ID/path of its NWB asset,
+    # which is what this cache needs to resolve an asset and check its acquisition
+    # ElectricalSeries rates. It is not a direct dependency of this cache: it is only present
+    # because content-id-to-valid-nwb-file itself depends on it as a nested subdataset.
     submodule_file_path = (
-        base_directory
+        valid_nwb_file_directory
         / "sourcedata"
-        / "content-id-to-usage-dandiset-path"
+        / "content-id-to-nwb-file"
         / "derivatives"
-        / "content_id_to_usage_dandiset_path.jsonl"
+        / "content_id_to_nwb_file.jsonl"
     )
     content_id_to_dandiset_path = {}
     with submodule_file_path.open(mode="r") as file_stream:
@@ -130,10 +149,10 @@ def _run(base_directory: pathlib.Path, testing: bool, limit: int | None) -> None
 
     content_ids_to_process = {
         content_id
-        for content_id, dandiset_path in content_id_to_dandiset_path.items()
+        for content_id in content_id_to_dandiset_path
         if content_id not in results
         and content_id not in error_ids
-        and _is_nwb_file(next(iter(dandiset_path.values())))
+        and content_id_to_valid_nwb_file.get(content_id) is True
     }
 
     run_limit = _TESTING_LIMIT if testing else limit
@@ -179,6 +198,8 @@ if __name__ == "__main__":
         default=default_base_directory,
         help=(
             "The directory containing the `sourcedata`, `derivatives`, and `logs` directories. "
+            "`sourcedata` must hold the `content-id-to-valid-nwb-file` dataset, cloned "
+            "recursively so its nested `content-id-to-nwb-file` subdataset is present too. "
             "Set to the mounted dataset path when run inside the pipeline container; "
             "defaults to the repository root."
         ),
