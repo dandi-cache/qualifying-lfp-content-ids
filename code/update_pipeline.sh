@@ -49,12 +49,26 @@ fi
 BOT_NAME="github-actions[bot]"
 BOT_EMAIL="github-actions[bot]@users.noreply.github.com"
 
-# Input mode: upstream DataLad dataset. content-id-to-usage-dandiset-path maps each content
-# ID to the dandiset(s)/path(s) it is used under, which is all this cache needs to resolve an
-# asset and check its acquisition ElectricalSeries rates.
-INPUT_SUBDATASET_URL="https://github.com/dandi-cache/content-id-to-usage-dandiset-path.git"
-INPUT_SUBDATASET_PATH="sourcedata/content-id-to-usage-dandiset-path"
-INPUT_SUBDATASET_BRANCH="derivatives"
+# Input mode: upstream DataLad datasets, registered as input subdatasets and pinned via
+# `--input` in the provenance of every run.
+#   - content-id-to-usage-dandiset-path maps each content ID to the dandiset(s)/path(s) it is
+#     used under, which is what this cache needs to resolve an asset and check its acquisition
+#     ElectricalSeries rates.
+#   - content-id-to-valid-nwb-file marks which content IDs are already known to open as valid
+#     NWB files, so this cache skips (for now) any content ID known to be invalid rather than
+#     spending a network round trip streaming an asset that would only fail.
+INPUT_SUBDATASET_URLS=(
+  "https://github.com/dandi-cache/content-id-to-usage-dandiset-path.git"
+  "https://github.com/dandi-cache/content-id-to-valid-nwb-file.git"
+)
+INPUT_SUBDATASET_PATHS=(
+  "sourcedata/content-id-to-usage-dandiset-path"
+  "sourcedata/content-id-to-valid-nwb-file"
+)
+INPUT_SUBDATASET_BRANCHES=(
+  "derivatives"
+  "derivatives"
+)
 
 DS="${RUNNER_TEMP:-/tmp}/derivatives-dataset"
 DISTDIR="${RUNNER_TEMP:-/tmp}/dist-publish"
@@ -74,20 +88,23 @@ rm -rf "${DS}" "${DISTDIR}"
 if git ls-remote --heads "${REPO_URL}" derivatives | grep -q refs/heads/derivatives; then
   echo "Reusing the existing 'derivatives' dataset branch."
   git clone --branch derivatives --single-branch "${REPO_URL}" "${DS}"
-  if [ -n "${INPUT_SUBDATASET_URL}" ]; then
-    git -C "${DS}" submodule update --init "${INPUT_SUBDATASET_PATH}"
-  fi
+  for input_subdataset_path in "${INPUT_SUBDATASET_PATHS[@]}"; do
+    git -C "${DS}" submodule update --init "${input_subdataset_path}"
+  done
 else
   echo "Bootstrapping a new 'derivatives' DataLad dataset."
   datalad create --no-annex "${DS}"
-  if [ -n "${INPUT_SUBDATASET_URL}" ]; then
-    datalad clone -d "${DS}" "${INPUT_SUBDATASET_URL}" "${DS}/${INPUT_SUBDATASET_PATH}"
+  for i in "${!INPUT_SUBDATASET_URLS[@]}"; do
+    input_subdataset_url="${INPUT_SUBDATASET_URLS[$i]}"
+    input_subdataset_path="${INPUT_SUBDATASET_PATHS[$i]}"
+    input_subdataset_branch="${INPUT_SUBDATASET_BRANCHES[$i]}"
+    datalad clone -d "${DS}" "${input_subdataset_url}" "${DS}/${input_subdataset_path}"
     # Track the input dataset's published-data branch (its default branch holds only code),
     # and record that branch in `.gitmodules` so `submodule update --remote` follows it.
-    git -C "${DS}/${INPUT_SUBDATASET_PATH}" fetch origin "${INPUT_SUBDATASET_BRANCH}"
-    git -C "${DS}/${INPUT_SUBDATASET_PATH}" checkout -B "${INPUT_SUBDATASET_BRANCH}" "origin/${INPUT_SUBDATASET_BRANCH}"
-    git -C "${DS}" config -f .gitmodules "submodule.${INPUT_SUBDATASET_PATH}.branch" "${INPUT_SUBDATASET_BRANCH}"
-  fi
+    git -C "${DS}/${input_subdataset_path}" fetch origin "${input_subdataset_branch}"
+    git -C "${DS}/${input_subdataset_path}" checkout -B "${input_subdataset_branch}" "origin/${input_subdataset_branch}"
+    git -C "${DS}" config -f .gitmodules "submodule.${input_subdataset_path}.branch" "${input_subdataset_branch}"
+  done
   datalad save -d "${DS}" -m "Initialize derivatives dataset"
 fi
 
@@ -109,15 +126,15 @@ mkdir -p derivatives
 cp "${WORKSPACE}/dataset_description.json" dataset_description.json
 datalad save -m "Update dataset_description.json" dataset_description.json
 
-# Advance the input subdataset to its latest commit and record the pointer. `-d .` is
+# Advance each input subdataset to its latest commit and record the pointer. `-d .` is
 # required here: without it, `datalad save` resolves the target dataset by walking up from
 # the given path, and since that path is itself a subdataset mount point, it silently targets
 # the (clean, nothing-to-save) subdataset instead of registering the new commit in the
 # superdataset -- exiting 0 without saving anything.
-if [ -n "${INPUT_SUBDATASET_URL}" ]; then
-  git submodule update --init --remote "${INPUT_SUBDATASET_PATH}"
-  datalad save -d . -m "Update input subdataset to latest" "${INPUT_SUBDATASET_PATH}"
-fi
+for input_subdataset_path in "${INPUT_SUBDATASET_PATHS[@]}"; do
+  git submodule update --init --remote "${input_subdataset_path}"
+  datalad save -d . -m "Update input subdataset ${input_subdataset_path} to latest" "${input_subdataset_path}"
+done
 
 # Pin the published image digest and register it as a container. Only the digest is stored
 # (a small text file), so the dataset stays annex-free; ghcr holds the image bytes.
@@ -152,14 +169,12 @@ fi
 # datalad from clearing the outputs first, which is required when the outputs are also prior
 # state (input) of the next incremental run.
 #
-# Input provenance depends on the input mode selected above: with an INPUT_SUBDATASET_URL the
-# subdataset is pinned via `--input`; in the first-in-chain / no-input-dataset mode there is
-# nothing to pin, so no `--input` is declared and the container fetches its own inputs over
-# the network (which therefore must be reachable from inside the container at run time).
+# Each input subdataset is pinned via its own `--input` so the provenance records the exact
+# commit of every source this run read from.
 RUN_INPUT_ARGS=()
-if [ -n "${INPUT_SUBDATASET_URL}" ]; then
-  RUN_INPUT_ARGS=(--input "${INPUT_SUBDATASET_PATH}")
-fi
+for input_subdataset_path in "${INPUT_SUBDATASET_PATHS[@]}"; do
+  RUN_INPUT_ARGS+=(--input "${input_subdataset_path}")
+done
 datalad containers-run -n pipeline --explicit \
   "${RUN_INPUT_ARGS[@]}" \
   --output derivatives \

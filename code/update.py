@@ -43,6 +43,19 @@ def _load_results(file_path: pathlib.Path) -> dict:
         }
 
 
+def _load_record_map(file_path: pathlib.Path) -> dict:
+    """Load a mapping from a JSONL file of one `{content_id: value}` object per line."""
+    if not file_path.exists():
+        return {}
+
+    records: dict = {}
+    with file_path.open(mode="r") as file_stream:
+        for line in file_stream:
+            if line.strip():
+                records.update(json.loads(line))
+    return records
+
+
 # The `derivatives` dataset is a persistent DataLad dataset: this log accumulates across every
 # run forever (entries are never otherwise removed), and GitHub hard-rejects any single blob over
 # 100 MB. Keep the log comfortably under that limit by dropping the oldest entries once it grows
@@ -110,6 +123,17 @@ def _run(base_directory: pathlib.Path, testing: bool, limit: int | None) -> None
             if line.strip():
                 content_id_to_dandiset_path.update(json.loads(line))
 
+    # Cross-referenced to skip content IDs already known not to open as a valid NWB file, so
+    # this cache never spends a network round trip streaming an asset that would only fail.
+    valid_nwb_file_path = (
+        base_directory
+        / "sourcedata"
+        / "content-id-to-valid-nwb-file"
+        / "derivatives"
+        / "content_id_to_valid_nwb_file.jsonl"
+    )
+    content_id_to_valid_nwb_file = _load_record_map(file_path=valid_nwb_file_path)
+
     derivatives_directory = base_directory / "derivatives"
     derivatives_directory.mkdir(parents=True, exist_ok=True)
     logs_directory = base_directory / "logs"
@@ -134,6 +158,7 @@ def _run(base_directory: pathlib.Path, testing: bool, limit: int | None) -> None
         if content_id not in results
         and content_id not in error_ids
         and _is_nwb_file(next(iter(dandiset_path.values())))
+        and content_id_to_valid_nwb_file.get(content_id) is True
     }
 
     run_limit = _TESTING_LIMIT if testing else limit
@@ -179,6 +204,8 @@ if __name__ == "__main__":
         default=default_base_directory,
         help=(
             "The directory containing the `sourcedata`, `derivatives`, and `logs` directories. "
+            "`sourcedata` must hold both the `content-id-to-usage-dandiset-path` and "
+            "`content-id-to-valid-nwb-file` datasets. "
             "Set to the mounted dataset path when run inside the pipeline container; "
             "defaults to the repository root."
         ),
