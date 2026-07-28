@@ -29,7 +29,8 @@ import requests
 url = "https://raw.githubusercontent.com/dandi-cache/qualifying-lfp-content-ids/refs/heads/dist/derivatives/qualifying_lfp_content_ids.jsonl.gz"
 response = requests.get(url)
 lines = gzip.decompress(data=response.content).decode("utf-8").splitlines()
-qualifying_lfp_content_ids = [json.loads(line) for line in lines]
+content_id_qualifies = dict(json.loads(line) for line in lines)  # content ID -> whether it qualifies
+qualifying_lfp_content_ids = [content_id for content_id, qualifies in content_id_qualifies.items() if qualifies]
 ```
 
 ### Save to file

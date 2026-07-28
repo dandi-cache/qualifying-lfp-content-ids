@@ -31,6 +31,18 @@ def _load_ids(file_path: pathlib.Path) -> set:
         return {json.loads(line) for line in file_stream if line.strip()}
 
 
+def _load_results(file_path: pathlib.Path) -> dict:
+    """Load a mapping of content ID to qualification result from a JSONL file of `[id, bool]` pairs."""
+    if not file_path.exists():
+        return {}
+
+    with file_path.open(mode="r") as file_stream:
+        return {
+            content_id: qualifies
+            for content_id, qualifies in (json.loads(line) for line in file_stream if line.strip())
+        }
+
+
 # The `derivatives` dataset is a persistent DataLad dataset: this log accumulates across every
 # run forever (entries are never otherwise removed), and GitHub hard-rejects any single blob over
 # 100 MB. Keep the log comfortably under that limit by dropping the oldest entries once it grows
@@ -106,23 +118,20 @@ def _run(base_directory: pathlib.Path, testing: bool, limit: int | None) -> None
     # Testing runs read and write their own designated files, so the real cache and its
     # bookkeeping are never touched.
     cache_file_name = _TESTING_FILE_NAME if testing else _CACHE_FILE_NAME
-    processed_ids_file_name = "testing_processed_ids.jsonl" if testing else "processed_ids.jsonl"
     error_ids_file_name = "testing_error_ids.jsonl" if testing else "error_ids.jsonl"
     error_log_file_name = "testing_errors.txt" if testing else "errors.txt"
 
     output_file_path = derivatives_directory / cache_file_name
-    processed_ids_file_path = derivatives_directory / processed_ids_file_name
     error_ids_file_path = derivatives_directory / error_ids_file_name
     error_log_file_path = logs_directory / error_log_file_name
 
-    qualifying_content_ids = _load_ids(output_file_path)
-    processed_ids = _load_ids(processed_ids_file_path)
+    results = _load_results(output_file_path)
     error_ids = _load_ids(error_ids_file_path)
 
     content_ids_to_process = {
         content_id
         for content_id, dandiset_path in content_id_to_dandiset_path.items()
-        if content_id not in processed_ids
+        if content_id not in results
         and content_id not in error_ids
         and _is_nwb_file(next(iter(dandiset_path.values())))
     }
@@ -152,14 +161,10 @@ def _run(base_directory: pathlib.Path, testing: bool, limit: int | None) -> None
             error_ids.add(content_id)
             continue
 
-        if qualifies:
-            qualifying_content_ids.add(content_id)
-        processed_ids.add(content_id)
+        results[content_id] = qualifies
 
     with output_file_path.open(mode="w") as file_stream:
-        file_stream.writelines(f"{json.dumps(content_id)}\n" for content_id in sorted(qualifying_content_ids))
-    with processed_ids_file_path.open(mode="w") as file_stream:
-        file_stream.writelines(f"{json.dumps(content_id)}\n" for content_id in sorted(processed_ids))
+        file_stream.writelines(f"{json.dumps([content_id, results[content_id]])}\n" for content_id in sorted(results))
     with error_ids_file_path.open(mode="w") as file_stream:
         file_stream.writelines(f"{json.dumps(content_id)}\n" for content_id in sorted(error_ids))
 
