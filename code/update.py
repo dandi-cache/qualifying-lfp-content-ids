@@ -104,25 +104,30 @@ def _nwb_file_qualifies(s3_url: str) -> bool:
 
 
 def _run(base_directory: pathlib.Path, testing: bool, limit: int | None) -> None:
+    valid_nwb_file_directory = base_directory / "sourcedata" / "content-id-to-valid-nwb-file"
+
+    # content-id-to-valid-nwb-file marks which content IDs are already known to open as valid
+    # NWB files, so this cache skips (for now) any content ID known to be invalid rather than
+    # spending a network round trip streaming an asset that would only fail.
+    valid_nwb_file_path = valid_nwb_file_directory / "derivatives" / "content_id_to_valid_nwb_file.jsonl"
+    content_id_to_valid_nwb_file = _load_record_map(file_path=valid_nwb_file_path)
+
+    # content-id-to-nwb-file maps each content ID to the dandiset ID/path of its NWB asset,
+    # which is what this cache needs to resolve an asset and check its acquisition
+    # ElectricalSeries rates. It is not a direct dependency of this cache: it is only present
+    # because content-id-to-valid-nwb-file itself depends on it as a nested subdataset.
     submodule_file_path = (
-        base_directory / "sourcedata" / "content-id-to-nwb-file" / "derivatives" / "content_id_to_nwb_file.jsonl"
+        valid_nwb_file_directory
+        / "sourcedata"
+        / "content-id-to-nwb-file"
+        / "derivatives"
+        / "content_id_to_nwb_file.jsonl"
     )
     content_id_to_dandiset_path = {}
     with submodule_file_path.open(mode="r") as file_stream:
         for line in file_stream:
             if line.strip():
                 content_id_to_dandiset_path.update(json.loads(line))
-
-    # Cross-referenced to skip content IDs already known not to open as a valid NWB file, so
-    # this cache never spends a network round trip streaming an asset that would only fail.
-    valid_nwb_file_path = (
-        base_directory
-        / "sourcedata"
-        / "content-id-to-valid-nwb-file"
-        / "derivatives"
-        / "content_id_to_valid_nwb_file.jsonl"
-    )
-    content_id_to_valid_nwb_file = _load_record_map(file_path=valid_nwb_file_path)
 
     derivatives_directory = base_directory / "derivatives"
     derivatives_directory.mkdir(parents=True, exist_ok=True)
@@ -193,8 +198,8 @@ if __name__ == "__main__":
         default=default_base_directory,
         help=(
             "The directory containing the `sourcedata`, `derivatives`, and `logs` directories. "
-            "`sourcedata` must hold both the `content-id-to-nwb-file` and "
-            "`content-id-to-valid-nwb-file` datasets. "
+            "`sourcedata` must hold the `content-id-to-valid-nwb-file` dataset, cloned "
+            "recursively so its nested `content-id-to-nwb-file` subdataset is present too. "
             "Set to the mounted dataset path when run inside the pipeline container; "
             "defaults to the repository root."
         ),
