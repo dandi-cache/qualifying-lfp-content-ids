@@ -3,11 +3,11 @@
 This cache catalogs NWB content IDs (from public Dandisets) that contain at least one
 `ElectricalSeries` in `acquisition` with a sampling rate above 10 kHz.
 
-It is derived from the [`content-id-to-usage-dandiset-path`](https://github.com/dandi-cache/content-id-to-usage-dandiset-path)
-cache: for each content ID not yet processed, it resolves a usage path to a DANDI asset,
-opens the asset remotely, and inspects the sampling rate of any acquisition `ElectricalSeries`
-it contains. Content IDs already known not to open as a valid NWB file, per the
-[`content-id-to-valid-nwb-file`](https://github.com/dandi-cache/content-id-to-valid-nwb-file)
+It is derived from the [`content-id-to-nwb-file`](https://github.com/dandi-cache/content-id-to-nwb-file)
+cache: for each content ID not yet processed, it resolves the dandiset ID/path of the NWB
+asset, opens the asset remotely, and inspects the sampling rate of any acquisition
+`ElectricalSeries` it contains. Content IDs already known not to open as a valid NWB file, per
+the [`content-id-to-valid-nwb-file`](https://github.com/dandi-cache/content-id-to-valid-nwb-file)
 cache, are skipped so this cache never spends a network round trip on an asset that would
 only fail.
 

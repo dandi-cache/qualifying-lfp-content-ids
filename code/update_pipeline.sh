@@ -51,18 +51,18 @@ BOT_EMAIL="github-actions[bot]@users.noreply.github.com"
 
 # Input mode: upstream DataLad datasets, registered as input subdatasets and pinned via
 # `--input` in the provenance of every run.
-#   - content-id-to-usage-dandiset-path maps each content ID to the dandiset(s)/path(s) it is
-#     used under, which is what this cache needs to resolve an asset and check its acquisition
+#   - content-id-to-nwb-file maps each content ID to the dandiset ID/path of its NWB asset,
+#     which is what this cache needs to resolve an asset and check its acquisition
 #     ElectricalSeries rates.
 #   - content-id-to-valid-nwb-file marks which content IDs are already known to open as valid
 #     NWB files, so this cache skips (for now) any content ID known to be invalid rather than
 #     spending a network round trip streaming an asset that would only fail.
 INPUT_SUBDATASET_URLS=(
-  "https://github.com/dandi-cache/content-id-to-usage-dandiset-path.git"
+  "https://github.com/dandi-cache/content-id-to-nwb-file.git"
   "https://github.com/dandi-cache/content-id-to-valid-nwb-file.git"
 )
 INPUT_SUBDATASET_PATHS=(
-  "sourcedata/content-id-to-usage-dandiset-path"
+  "sourcedata/content-id-to-nwb-file"
   "sourcedata/content-id-to-valid-nwb-file"
 )
 INPUT_SUBDATASET_BRANCHES=(

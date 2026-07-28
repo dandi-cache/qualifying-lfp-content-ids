@@ -16,12 +16,6 @@ _TESTING_FILE_NAME = "testing.jsonl"
 _TESTING_LIMIT = 10
 
 
-def _is_nwb_file(path: str) -> bool:
-    """Whether a path points to an NWB asset, which ends in `.nwb` (HDF5) or `.nwb.zarr` (Zarr)."""
-    suffixes = pathlib.Path(path).suffixes
-    return suffixes[-2:] == [".nwb", ".zarr"] or suffixes[-1:] == [".nwb"]
-
-
 def _load_ids(file_path: pathlib.Path) -> set:
     """Load a set of IDs from a JSONL file, returning an empty set if the file does not exist."""
     if not file_path.exists():
@@ -111,11 +105,7 @@ def _nwb_file_qualifies(s3_url: str) -> bool:
 
 def _run(base_directory: pathlib.Path, testing: bool, limit: int | None) -> None:
     submodule_file_path = (
-        base_directory
-        / "sourcedata"
-        / "content-id-to-usage-dandiset-path"
-        / "derivatives"
-        / "content_id_to_usage_dandiset_path.jsonl"
+        base_directory / "sourcedata" / "content-id-to-nwb-file" / "derivatives" / "content_id_to_nwb_file.jsonl"
     )
     content_id_to_dandiset_path = {}
     with submodule_file_path.open(mode="r") as file_stream:
@@ -154,10 +144,9 @@ def _run(base_directory: pathlib.Path, testing: bool, limit: int | None) -> None
 
     content_ids_to_process = {
         content_id
-        for content_id, dandiset_path in content_id_to_dandiset_path.items()
+        for content_id in content_id_to_dandiset_path
         if content_id not in results
         and content_id not in error_ids
-        and _is_nwb_file(next(iter(dandiset_path.values())))
         and content_id_to_valid_nwb_file.get(content_id) is True
     }
 
@@ -204,7 +193,7 @@ if __name__ == "__main__":
         default=default_base_directory,
         help=(
             "The directory containing the `sourcedata`, `derivatives`, and `logs` directories. "
-            "`sourcedata` must hold both the `content-id-to-usage-dandiset-path` and "
+            "`sourcedata` must hold both the `content-id-to-nwb-file` and "
             "`content-id-to-valid-nwb-file` datasets. "
             "Set to the mounted dataset path when run inside the pipeline container; "
             "defaults to the repository root."
