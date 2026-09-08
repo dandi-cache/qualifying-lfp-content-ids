@@ -25,18 +25,6 @@ def _load_ids(file_path: pathlib.Path) -> set:
         return {json.loads(line) for line in file_stream if line.strip()}
 
 
-def _load_results(file_path: pathlib.Path) -> dict:
-    """Load a mapping of content ID to qualification result from a JSONL file of `[id, bool]` pairs."""
-    if not file_path.exists():
-        return {}
-
-    with file_path.open(mode="r") as file_stream:
-        return {
-            content_id: qualifies
-            for content_id, qualifies in (json.loads(line) for line in file_stream if line.strip())
-        }
-
-
 def _load_record_map(file_path: pathlib.Path) -> dict:
     """Load a mapping from a JSONL file of one `{content_id: value}` object per line."""
     if not file_path.exists():
@@ -144,7 +132,7 @@ def _run(base_directory: pathlib.Path, testing: bool, limit: int | None) -> None
     error_ids_file_path = derivatives_directory / error_ids_file_name
     error_log_file_path = logs_directory / error_log_file_name
 
-    results = _load_results(output_file_path)
+    results = _load_record_map(file_path=output_file_path)
     error_ids = _load_ids(error_ids_file_path)
 
     content_ids_to_process = {
@@ -183,7 +171,9 @@ def _run(base_directory: pathlib.Path, testing: bool, limit: int | None) -> None
         results[content_id] = qualifies
 
     with output_file_path.open(mode="w") as file_stream:
-        file_stream.writelines(f"{json.dumps([content_id, results[content_id]])}\n" for content_id in sorted(results))
+        file_stream.writelines(
+            f"{json.dumps({content_id: results[content_id]})}\n" for content_id in sorted(results)
+        )
     with error_ids_file_path.open(mode="w") as file_stream:
         file_stream.writelines(f"{json.dumps(content_id)}\n" for content_id in sorted(error_ids))
 
