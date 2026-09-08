@@ -171,9 +171,7 @@ def _run(base_directory: pathlib.Path, testing: bool, limit: int | None) -> None
         results[content_id] = qualifies
 
     with output_file_path.open(mode="w") as file_stream:
-        file_stream.writelines(
-            f"{json.dumps({content_id: results[content_id]})}\n" for content_id in sorted(results)
-        )
+        file_stream.writelines(f"{json.dumps({content_id: results[content_id]})}\n" for content_id in sorted(results))
     with error_ids_file_path.open(mode="w") as file_stream:
         file_stream.writelines(f"{json.dumps(content_id)}\n" for content_id in sorted(error_ids))
 
