@@ -1,0 +1,43 @@
+# The complete declarative description of this cache.
+#
+# One file, read by both the shared orchestration and this cache's own update code, so the two
+# cannot disagree. It replaces what used to be spread across `code/update_pipeline.sh`, the update
+# workflow, `dataset_description.json`, and the constants at the top of `code/update.py`.
+
+[cache]
+name = "qualifying-lfp-content-ids"
+
+# Two files, written together by every run:
+#
+#   qualifying_lfp_content_ids  the cache itself, one boolean per assessed content ID
+#   error_ids                   the content IDs whose assessment failed, so a later run does not
+#                               spend the same expensive stream failing the same way
+outputs = [
+    "qualifying_lfp_content_ids.jsonl",
+    "error_ids.jsonl",
+]
+
+# Which files open and pass the NWB Inspector. Only those are streamed, so this cache never spends
+# a round trip on an asset already known to fail.
+[[inputs]]
+name = "content-id-to-valid-nwb-file"
+
+# How a content ID is resolved to the Dandiset and path the DANDI API needs to hand back a URL.
+#
+# Declared directly rather than reached for inside the other input's own `sourcedata/`. It was
+# only ever readable there because `content-id-to-valid-nwb-file` happens to depend on it, which
+# meant this cache's provenance pinned it by accident rather than on purpose.
+[[inputs]]
+name = "content-id-to-nwb-file"
+
+# Streaming every ElectricalSeries of a session is heavy, so a run advances the backlog by a
+# bounded batch. The workflow and the shell script each carried their own copy of this number; it
+# is declared once here.
+[operations.update]
+limit = 2000
+
+# The published branches describe this repository as a BIDS study dataset, through a
+# `dataset_description.json` with `DatasetType: "study"`. The pipeline renders that file from this
+# section at the start of every run, so the repository no longer carries it by hand.
+[description]
+authors = ["Cody Baker"]
