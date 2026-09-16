@@ -1,11 +1,18 @@
+# This cache's own processing dependencies, in one place: the container installs them, and
+# `uv run --project envs` recreates the same set locally for debugging.
+#
+# `spikeinterface` is this cache's own: the `:nwb` base image carries remfile and the DANDI API, which is what streaming needs, but reading an ElectricalSeries' sampling rate is this cache's question alone.
+#
+# `datalad` and `datalad-container` used to be here too. They never ran inside the image; the
+# shared pipeline installs them on the runner from its own pinned requirements.
+
 [project]
 name = "qualifying-lfp-content-ids"
 version = "0.1.0"
 requires-python = ">=3.13"
-dependencies = [
-    "datalad",
-    "datalad-container",
-    "dandi",
-    "remfile",
-    "spikeinterface",
-]
+dependencies = ["spikeinterface"]
+
+[project.optional-dependencies]
+# Only for running outside the container: inside it, the library comes from the base image, and
+# installing it again from git would silently replace the version that image was built with.
+local = ["dandi-cache-utils[all] @ git+https://github.com/dandi-cache/dandi-cache-utils.git"]
