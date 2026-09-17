@@ -7,3 +7,4 @@
 	path = sourcedata/content-id-to-nwb-file
 	url = https://github.com/dandi-cache/content-id-to-nwb-file.git
 	datalad-url = https://github.com/dandi-cache/content-id-to-nwb-file.git
+	branch = derivatives
