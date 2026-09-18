@@ -1,0 +1,5 @@
+2026-09-18T20:18:36Z INFO Logging to /tmp/logs/update_2026-09-18T20-18-36Z.log.
+2026-09-18T20:18:36Z INFO Update qualifying-lfp-content-ids (base directory /tmp).
+2026-09-18T20:18:38Z INFO Processing 1 items (49895 already recorded).
+2026-09-18T20:18:39Z INFO [1/1] 51ba1795-69cf-43af-b6fe-e443659e526f: does not qualify; 1.6 s; peak memory 220 MiB.
+2026-09-18T20:18:40Z INFO Wrote 49896 records to /tmp/derivatives/qualifying_lfp_content_ids.jsonl (1 new, 0 failed) in 0.0 min (peak memory 221 MiB).
