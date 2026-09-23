@@ -26,13 +26,14 @@ If you only plan to use this cache infrequently or from disparate locations, you
 ```python
 import gzip
 import json
-
-import requests
+import urllib.request
 
 url = "https://raw.githubusercontent.com/dandi-cache/qualifying-lfp-content-ids/refs/heads/dist/derivatives/qualifying_lfp_content_ids.jsonl.gz"
-response = requests.get(url)
-lines = gzip.decompress(data=response.content).decode("utf-8").splitlines()
-content_id_qualifies = dict(json.loads(line) for line in lines)  # content ID -> whether it qualifies
+with urllib.request.urlopen(url) as response:
+    lines = gzip.decompress(data=response.read()).decode("utf-8").splitlines()
+content_id_qualifies = {  # content ID -> whether it qualifies
+    content_id: qualifies for line in lines for content_id, qualifies in json.loads(line).items()
+}
 qualifying_lfp_content_ids = [content_id for content_id, qualifies in content_id_qualifies.items() if qualifies]
 ```
 
