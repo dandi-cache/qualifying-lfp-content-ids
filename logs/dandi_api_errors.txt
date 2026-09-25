@@ -1,0 +1,31 @@
+Error while retrieving asset information from the DANDI API for `16031d88-9b27-46b8-91f6-d31c78eaef5d` (dandiset ID 001950, path sub-754897/sub-754897_ses-behavior-754897-2025-03-14-11-28-48.nwb)!
+
+<class 'dandi.exceptions.NotFoundError'>: No asset at path 'sub-754897/sub-754897_ses-behavior-754897-2025-03-14-11-28-48.nwb' in version draft. Verify the path is correct and the asset exists in this version. Use 'dandi ls' to list available assets.
+
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.13/site-packages/dandi/dandiapi.py", line 1505, in get_asset_by_path
+    (asset,) = (
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 1, got 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.13/site-packages/dandi_cache_utils/_runner.py", line 160, in run_incremental_update
+    value = process(item, scope) if takes_scope else process(item)
+            ~~~~~~~^^^^^^^^^^^^^
+  File "/workspace/code/update.py", line 65, in assess
+    url = resolver.content_url(dandiset_id, path)
+  File "/opt/venv/lib/python3.13/site-packages/dandi_cache_utils/api.py", line 58, in content_url
+    return self.asset(dandiset_id, path).get_content_url(follow_redirects=1, strip_query=True)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.13/site-packages/dandi_cache_utils/api.py", line 54, in asset
+    return self.dandiset(dandiset_id).get_asset_by_path(path=path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/opt/venv/lib/python3.13/site-packages/dandi/dandiapi.py", line 1509, in get_asset_by_path
+    raise NotFoundError(
+    ...<3 lines>...
+    )
+dandi.exceptions.NotFoundError: No asset at path 'sub-754897/sub-754897_ses-behavior-754897-2025-03-14-11-28-48.nwb' in version draft. Verify the path is correct and the asset exists in this version. Use 'dandi ls' to list available assets.
+
+
