@@ -73,7 +73,7 @@ def main() -> None:
         candidates=candidates,
         process=assess,
         recorded=assessed,
-        limit=dandi_cache.effective_limit(testing=dataset.testing, limit=arguments.limit),
+        limit=dataset.limit(arguments.limit),
         # A failed assessment is not recorded as a `false`: this cache's `false` means the file
         # does not qualify, and conflating the two would publish a judgement never made.
         # `error_ids` is what keeps the item out of later runs instead.
