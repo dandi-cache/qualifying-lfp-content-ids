@@ -1,0 +1,763 @@
+2026-10-01T03:44:17Z INFO Logging to /tmp/logs/update_2026-10-01T03-44-17Z.log.
+2026-10-01T03:44:17Z INFO Update qualifying-lfp-content-ids (base directory /tmp).
+2026-10-01T03:44:18Z INFO Processing 376 items (60602 already recorded).
+2026-10-01T03:44:19Z WARNING 20faa905-b791-49ca-8c12-ebb7d21c3043: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:19Z WARNING [1/376] 20faa905-b791-49ca-8c12-ebb7d21c3043: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:19Z WARNING 20fc0490-b5c2-49c8-a056-f18653ecfa8b: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:19Z WARNING [2/376] 20fc0490-b5c2-49c8-a056-f18653ecfa8b: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:19Z WARNING 20fcc0c7-4584-4f4a-a370-7702bda8b4f8: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:19Z WARNING [3/376] 20fcc0c7-4584-4f4a-a370-7702bda8b4f8: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:19Z WARNING 20fdcd60-3306-415a-a329-c7a2a843187f: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:19Z WARNING [4/376] 20fdcd60-3306-415a-a329-c7a2a843187f: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:20Z WARNING 20fe7501-9208-4fb7-9856-7c2fdece0fd4: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:20Z WARNING [5/376] 20fe7501-9208-4fb7-9856-7c2fdece0fd4: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:20Z WARNING 20fe838f-76ca-481b-911e-69432b747e9f: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:20Z WARNING [6/376] 20fe838f-76ca-481b-911e-69432b747e9f: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:20Z WARNING 21000fa2-a276-48bc-89d6-fc37d7c7ce2f: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:20Z WARNING [7/376] 21000fa2-a276-48bc-89d6-fc37d7c7ce2f: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:20Z WARNING 210014ef-0428-4eff-96e9-be02503cc247: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:20Z WARNING [8/376] 210014ef-0428-4eff-96e9-be02503cc247: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:20Z WARNING 210091bf-cf96-46a9-8ccc-738a44ec4d55: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:20Z WARNING [9/376] 210091bf-cf96-46a9-8ccc-738a44ec4d55: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:21Z WARNING 2100caa8-58d6-42b6-aa13-9c417a95d61f: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:21Z WARNING [10/376] 2100caa8-58d6-42b6-aa13-9c417a95d61f: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:21Z WARNING 21010c0d-2ddc-4947-8fdd-6947da6422b9: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:21Z WARNING [11/376] 21010c0d-2ddc-4947-8fdd-6947da6422b9: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:21Z WARNING 2101a4ba-aa84-4bb6-803a-14209dc6cc73: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:21Z WARNING [12/376] 2101a4ba-aa84-4bb6-803a-14209dc6cc73: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:21Z WARNING 2101db99-da0d-4535-80ef-4534acb9537a: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:21Z WARNING [13/376] 2101db99-da0d-4535-80ef-4534acb9537a: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:21Z WARNING 21031de2-f8a1-4bf5-8cc9-50eef865fd85: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:21Z WARNING [14/376] 21031de2-f8a1-4bf5-8cc9-50eef865fd85: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:21Z WARNING 21036144-404a-4843-a563-dfb82220dee6: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:21Z WARNING [15/376] 21036144-404a-4843-a563-dfb82220dee6: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:22Z WARNING 21037e79-454e-49e2-bff5-a79ad49d8330: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:22Z WARNING [16/376] 21037e79-454e-49e2-bff5-a79ad49d8330: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:22Z WARNING 2103f8c2-e49d-48cd-8d6d-54a3627a907d: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:22Z WARNING [17/376] 2103f8c2-e49d-48cd-8d6d-54a3627a907d: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:22Z WARNING 2104451f-fdb5-4643-9358-39a9ac78b483: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:22Z WARNING [18/376] 2104451f-fdb5-4643-9358-39a9ac78b483: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:22Z WARNING 21048fc5-115e-41d0-8fd0-8bde4d88c52e: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:22Z WARNING [19/376] 21048fc5-115e-41d0-8fd0-8bde4d88c52e: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:22Z WARNING 2104af20-4030-4011-ac7a-4fbe6f97406a: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:22Z WARNING [20/376] 2104af20-4030-4011-ac7a-4fbe6f97406a: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:22Z WARNING 210651ed-fd8e-4f97-adfd-19867ce582e8: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:22Z WARNING [21/376] 210651ed-fd8e-4f97-adfd-19867ce582e8: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:22Z WARNING 2106bc98-5f4f-4453-ae3e-6f81457e869b: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:22Z WARNING [22/376] 2106bc98-5f4f-4453-ae3e-6f81457e869b: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:23Z WARNING 210722c2-f81e-49b5-865a-1dd97f16b15e: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:23Z WARNING [23/376] 210722c2-f81e-49b5-865a-1dd97f16b15e: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:23Z WARNING 21073ed0-a3ab-49fb-ad19-d8950522eae1: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:23Z WARNING [24/376] 21073ed0-a3ab-49fb-ad19-d8950522eae1: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:23Z WARNING 2107dd32-dd3e-43e7-ae2b-5cac82af27d4: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:23Z WARNING [25/376] 2107dd32-dd3e-43e7-ae2b-5cac82af27d4: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:23Z WARNING 210814d0-9d91-4c02-a215-33f8690d7eb6: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:23Z WARNING [26/376] 210814d0-9d91-4c02-a215-33f8690d7eb6: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:23Z WARNING 21089995-eef0-4b9e-8dc8-165cc5eeb0db: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:23Z WARNING [27/376] 21089995-eef0-4b9e-8dc8-165cc5eeb0db: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:23Z WARNING 2108b987-11f1-45cd-ada9-3be5071a68b9: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:23Z WARNING [28/376] 2108b987-11f1-45cd-ada9-3be5071a68b9: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:24Z WARNING 2108bab0-60f9-4b61-a164-7ef1234f33be: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:24Z WARNING [29/376] 2108bab0-60f9-4b61-a164-7ef1234f33be: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:24Z WARNING 21091282-60e5-4b84-a235-71b7f3521e10: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:24Z WARNING [30/376] 21091282-60e5-4b84-a235-71b7f3521e10: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:24Z WARNING 2109b21c-8001-4fb9-97dc-28f5df591fdb: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:24Z WARNING [31/376] 2109b21c-8001-4fb9-97dc-28f5df591fdb: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:24Z WARNING 2109cb7c-c20e-437d-a371-f315c5854aaf: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:24Z WARNING [32/376] 2109cb7c-c20e-437d-a371-f315c5854aaf: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:24Z WARNING 210a7a9c-8d20-4260-9be8-69fe2e58894d: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:24Z WARNING [33/376] 210a7a9c-8d20-4260-9be8-69fe2e58894d: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:24Z WARNING 210bb8c6-0616-47dc-921f-b5c41575769c: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:24Z WARNING [34/376] 210bb8c6-0616-47dc-921f-b5c41575769c: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:25Z WARNING 210c84fa-ab26-4987-8e22-fb20a634fec9: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:25Z WARNING [35/376] 210c84fa-ab26-4987-8e22-fb20a634fec9: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:25Z WARNING 210ded9c-2981-4638-9fad-852aad6481c7: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:25Z WARNING [36/376] 210ded9c-2981-4638-9fad-852aad6481c7: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:25Z WARNING 210efe71-9cf0-4f82-b5c5-6c8fdcb40162: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:25Z WARNING [37/376] 210efe71-9cf0-4f82-b5c5-6c8fdcb40162: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:25Z WARNING 210f3591-6b92-41e3-bbb6-f58bd4fbf256: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:25Z WARNING [38/376] 210f3591-6b92-41e3-bbb6-f58bd4fbf256: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:25Z WARNING 210f9858-0763-47a1-a9db-cfc45e6cb740: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:25Z WARNING [39/376] 210f9858-0763-47a1-a9db-cfc45e6cb740: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:25Z WARNING 210fbf3f-65ff-4b63-9cfa-9e67a993b687: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:25Z WARNING [40/376] 210fbf3f-65ff-4b63-9cfa-9e67a993b687: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:26Z WARNING 21103004-fa80-473b-a0ae-edfb38502589: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:26Z WARNING [41/376] 21103004-fa80-473b-a0ae-edfb38502589: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:26Z WARNING 2110326c-7732-4b7b-85ed-2981b48b6424: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:26Z WARNING [42/376] 2110326c-7732-4b7b-85ed-2981b48b6424: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:26Z WARNING 21111b7d-fc6a-44d4-a26f-8c920f7a9883: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:26Z WARNING [43/376] 21111b7d-fc6a-44d4-a26f-8c920f7a9883: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:26Z WARNING 2111e68a-1d22-482d-a2a5-e64a66c1b39e: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:26Z WARNING [44/376] 2111e68a-1d22-482d-a2a5-e64a66c1b39e: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:26Z WARNING 2111ebed-0766-4d9c-812e-7e0db476aa9e: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:26Z WARNING [45/376] 2111ebed-0766-4d9c-812e-7e0db476aa9e: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:26Z WARNING 21132111-7142-43f7-b4dd-df4f57a4166d: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:26Z WARNING [46/376] 21132111-7142-43f7-b4dd-df4f57a4166d: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:27Z WARNING 21133667-5503-4c38-a6b2-89ca1f9b1901: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:27Z WARNING [47/376] 21133667-5503-4c38-a6b2-89ca1f9b1901: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:27Z WARNING 211336ca-3929-4813-952f-1a6edbe9d8b3: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:27Z WARNING [48/376] 211336ca-3929-4813-952f-1a6edbe9d8b3: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:27Z WARNING 21144eac-b8b5-4eaf-881c-a0e04c4d6453: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:27Z WARNING [49/376] 21144eac-b8b5-4eaf-881c-a0e04c4d6453: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:27Z WARNING 21153151-2c87-4076-8071-ed9a9fd98a8f: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:27Z WARNING [50/376] 21153151-2c87-4076-8071-ed9a9fd98a8f: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:27Z INFO [50/376] 21153151-2c87-4076-8071-ed9a9fd98a8f: checkpointed 60602 records.
+2026-10-01T03:44:27Z WARNING 2116e525-9056-41eb-85cb-e99bc096b8c0: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:27Z WARNING [51/376] 2116e525-9056-41eb-85cb-e99bc096b8c0: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:27Z WARNING 2117c47f-d0fa-4e48-a455-d50066617d46: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:27Z WARNING [52/376] 2117c47f-d0fa-4e48-a455-d50066617d46: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:27Z WARNING 2117de28-5dff-4f13-a8ed-ef8630b80140: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:27Z WARNING [53/376] 2117de28-5dff-4f13-a8ed-ef8630b80140: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:28Z WARNING 211871c1-59fa-4322-9e77-c6ac821a808d: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:28Z WARNING [54/376] 211871c1-59fa-4322-9e77-c6ac821a808d: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:28Z WARNING 211886eb-1b19-430a-a0c4-ff6b92b83d11: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:28Z WARNING [55/376] 211886eb-1b19-430a-a0c4-ff6b92b83d11: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:28Z WARNING 21194bbb-7362-42a3-9252-af63effba688: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:28Z WARNING [56/376] 21194bbb-7362-42a3-9252-af63effba688: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:28Z WARNING 211a79df-7267-49da-90ab-e343840f6b7f: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:28Z WARNING [57/376] 211a79df-7267-49da-90ab-e343840f6b7f: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:28Z WARNING 211b0000-ddea-469e-b905-7a0cc8f05bbe: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:28Z WARNING [58/376] 211b0000-ddea-469e-b905-7a0cc8f05bbe: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:28Z WARNING 211b894f-1920-427f-b049-134066524f63: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:28Z WARNING [59/376] 211b894f-1920-427f-b049-134066524f63: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:29Z WARNING 211be8f3-fc45-4399-9f4c-fc039da0fe97: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:29Z WARNING [60/376] 211be8f3-fc45-4399-9f4c-fc039da0fe97: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:29Z WARNING 211c0f4c-871b-4055-813b-502ef3f33a5e: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:29Z WARNING [61/376] 211c0f4c-871b-4055-813b-502ef3f33a5e: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:29Z WARNING 211c63a9-fd57-45cb-a093-27199bbdf744: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:29Z WARNING [62/376] 211c63a9-fd57-45cb-a093-27199bbdf744: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:29Z WARNING 211d6732-df79-4e27-9df8-a1e1a2726521: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:29Z WARNING [63/376] 211d6732-df79-4e27-9df8-a1e1a2726521: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:29Z WARNING 211d6cb0-eb9a-47ab-90ae-0a56ba403f1d: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:29Z WARNING [64/376] 211d6cb0-eb9a-47ab-90ae-0a56ba403f1d: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:29Z WARNING 211d9a42-6c5b-4b29-b714-3e4dd8ccd283: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:29Z WARNING [65/376] 211d9a42-6c5b-4b29-b714-3e4dd8ccd283: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:29Z WARNING 211da519-19f4-4508-9951-027124aad557: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:29Z WARNING [66/376] 211da519-19f4-4508-9951-027124aad557: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:30Z WARNING 211de4f0-1db6-4288-ae39-e55809e9cf29: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:30Z WARNING [67/376] 211de4f0-1db6-4288-ae39-e55809e9cf29: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:30Z WARNING 211e391b-35c4-4475-ae4d-7ad2e287cc5c: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:30Z WARNING [68/376] 211e391b-35c4-4475-ae4d-7ad2e287cc5c: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:30Z WARNING 211e4ceb-2e38-4fc7-914c-fbb3ee2cb6aa: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:30Z WARNING [69/376] 211e4ceb-2e38-4fc7-914c-fbb3ee2cb6aa: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:30Z WARNING 211f821e-30b7-4873-9a78-d647d7c4c65d: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:30Z WARNING [70/376] 211f821e-30b7-4873-9a78-d647d7c4c65d: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:30Z WARNING 211fc058-8588-4b35-9a94-5c6408cc241f: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:30Z WARNING [71/376] 211fc058-8588-4b35-9a94-5c6408cc241f: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:31Z WARNING 211fde8e-83e7-4312-804c-ba40bbab4e05: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:31Z WARNING [72/376] 211fde8e-83e7-4312-804c-ba40bbab4e05: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:31Z WARNING 21204b57-3ebd-4f41-9db0-85f35060c8aa: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:31Z WARNING [73/376] 21204b57-3ebd-4f41-9db0-85f35060c8aa: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:31Z WARNING 21214aab-7717-4e63-a50b-3fe9b10a1ad8: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:31Z WARNING [74/376] 21214aab-7717-4e63-a50b-3fe9b10a1ad8: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:31Z WARNING 212186dd-1287-4829-ba1f-7f00703dbda9: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:31Z WARNING [75/376] 212186dd-1287-4829-ba1f-7f00703dbda9: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:31Z WARNING 2121ba6d-3902-4c36-ab8c-82ee868dbf8f: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:31Z WARNING [76/376] 2121ba6d-3902-4c36-ab8c-82ee868dbf8f: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:31Z WARNING 2121db1b-dc2d-4dad-b9fe-d87b0e6602ba: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:31Z WARNING [77/376] 2121db1b-dc2d-4dad-b9fe-d87b0e6602ba: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:31Z WARNING 2122abee-1a85-4008-9b3b-7a143d084d26: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:31Z WARNING [78/376] 2122abee-1a85-4008-9b3b-7a143d084d26: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:32Z WARNING 212412b5-7009-407a-a109-e55226ac9cba: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:32Z WARNING [79/376] 212412b5-7009-407a-a109-e55226ac9cba: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:32Z WARNING 21242226-12f3-443f-b0a0-79da4878e259: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:32Z WARNING [80/376] 21242226-12f3-443f-b0a0-79da4878e259: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:32Z WARNING 212444c6-0ee2-435f-9449-3bd7d9cd2c9a: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:32Z WARNING [81/376] 212444c6-0ee2-435f-9449-3bd7d9cd2c9a: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:32Z WARNING 21245c2a-16c0-49ed-972b-7bfbc27e18fa: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:32Z WARNING [82/376] 21245c2a-16c0-49ed-972b-7bfbc27e18fa: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:32Z WARNING 21248bef-639d-467d-91bb-3c98d82256ba: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:32Z WARNING [83/376] 21248bef-639d-467d-91bb-3c98d82256ba: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:32Z WARNING 2124b4ba-98c8-43df-a44e-bc7e4949a2b2: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:32Z WARNING [84/376] 2124b4ba-98c8-43df-a44e-bc7e4949a2b2: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:32Z WARNING 2124f001-bb5c-4ab3-8f52-c62a2be8c67e: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:32Z WARNING [85/376] 2124f001-bb5c-4ab3-8f52-c62a2be8c67e: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:33Z WARNING 21275f91-7844-4d9f-83c3-cb87b7eba728: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:33Z WARNING [86/376] 21275f91-7844-4d9f-83c3-cb87b7eba728: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:33Z WARNING 2127c0c7-6582-4bef-a6d7-c13436499881: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:33Z WARNING [87/376] 2127c0c7-6582-4bef-a6d7-c13436499881: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:33Z WARNING 21286334-6f2b-4ab5-8afb-3e4bce610fab: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:33Z WARNING [88/376] 21286334-6f2b-4ab5-8afb-3e4bce610fab: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:33Z WARNING 2128e8e0-532b-4981-a362-26797b2139d9: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:33Z WARNING [89/376] 2128e8e0-532b-4981-a362-26797b2139d9: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:33Z WARNING 21293758-9e66-4f3c-bbe2-18abf655bb15: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:33Z WARNING [90/376] 21293758-9e66-4f3c-bbe2-18abf655bb15: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:33Z WARNING 21294e4a-ec7f-48a9-8933-098d07aafaaf: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:33Z WARNING [91/376] 21294e4a-ec7f-48a9-8933-098d07aafaaf: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:33Z WARNING 21297a24-a363-4b40-9585-197771353be2: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:33Z WARNING [92/376] 21297a24-a363-4b40-9585-197771353be2: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:34Z WARNING 212998b7-c7d5-4524-8654-cb656c77f10c: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:34Z WARNING [93/376] 212998b7-c7d5-4524-8654-cb656c77f10c: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:34Z WARNING 21299aa0-d95a-4080-9aa4-7c99774ce6cb: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:34Z WARNING [94/376] 21299aa0-d95a-4080-9aa4-7c99774ce6cb: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:34Z WARNING 2129eaaa-1d84-42dc-b7bb-3dda6372b1fa: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:34Z WARNING [95/376] 2129eaaa-1d84-42dc-b7bb-3dda6372b1fa: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:34Z WARNING 212a3e17-22e5-4136-8b49-f24e362c6f74: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:34Z WARNING [96/376] 212a3e17-22e5-4136-8b49-f24e362c6f74: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:34Z WARNING 212aac4f-8353-4f14-b738-7be15b75c9d6: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:34Z WARNING [97/376] 212aac4f-8353-4f14-b738-7be15b75c9d6: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:34Z WARNING 212aac56-0f42-48be-a6f3-bacf4bca3a6f: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:34Z WARNING [98/376] 212aac56-0f42-48be-a6f3-bacf4bca3a6f: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:34Z WARNING 212b194e-faf0-4f5b-94d2-56fd0cbb2b91: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:34Z WARNING [99/376] 212b194e-faf0-4f5b-94d2-56fd0cbb2b91: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:35Z WARNING 212b83ca-963d-445c-b5fd-c387188725fd: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:35Z WARNING [100/376] 212b83ca-963d-445c-b5fd-c387188725fd: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:35Z INFO [100/376] 212b83ca-963d-445c-b5fd-c387188725fd: checkpointed 60602 records.
+2026-10-01T03:44:35Z WARNING 212b9f80-c8bf-41f4-8dd8-76da5e3c01e4: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:35Z WARNING [101/376] 212b9f80-c8bf-41f4-8dd8-76da5e3c01e4: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:35Z WARNING 212c2aff-9ba4-4ee2-8941-436b18df2b24: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:35Z WARNING [102/376] 212c2aff-9ba4-4ee2-8941-436b18df2b24: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:35Z WARNING 212c6547-26ef-49e2-bda4-30d3b04835dc: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:35Z WARNING [103/376] 212c6547-26ef-49e2-bda4-30d3b04835dc: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:35Z WARNING 212e5b1e-c5b2-4957-abf8-3310a7025aa6: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:35Z WARNING [104/376] 212e5b1e-c5b2-4957-abf8-3310a7025aa6: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:35Z WARNING 212ed00d-fd0e-47e9-8466-7d2192904d49: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:35Z WARNING [105/376] 212ed00d-fd0e-47e9-8466-7d2192904d49: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:36Z WARNING 212f927f-3796-4a6d-b5b1-3f9bfaa2626a: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:36Z WARNING [106/376] 212f927f-3796-4a6d-b5b1-3f9bfaa2626a: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:36Z WARNING 21308d82-8785-4096-aac4-5a68bc45804d: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:36Z WARNING [107/376] 21308d82-8785-4096-aac4-5a68bc45804d: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:36Z WARNING 213279ad-d6ef-453f-b263-02f0bdd473c1: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:36Z WARNING [108/376] 213279ad-d6ef-453f-b263-02f0bdd473c1: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:36Z WARNING 213280e9-b831-43cf-ba42-6a120f5611d7: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:36Z WARNING [109/376] 213280e9-b831-43cf-ba42-6a120f5611d7: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:36Z WARNING 21345aaf-1a78-4edc-bf6d-4b608a30d36b: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:36Z WARNING [110/376] 21345aaf-1a78-4edc-bf6d-4b608a30d36b: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:36Z WARNING 2136445f-71b3-4dee-a07b-95e53ca5812e: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:36Z WARNING [111/376] 2136445f-71b3-4dee-a07b-95e53ca5812e: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:37Z WARNING 2136e3fd-a9de-412f-a7e5-5b5c2088cd03: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:37Z WARNING [112/376] 2136e3fd-a9de-412f-a7e5-5b5c2088cd03: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:37Z WARNING 21377859-df18-43a1-aac6-63c248f8d627: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:37Z WARNING [113/376] 21377859-df18-43a1-aac6-63c248f8d627: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:37Z WARNING 2137951a-aee2-4cb6-8ca7-1376f913852c: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:37Z WARNING [114/376] 2137951a-aee2-4cb6-8ca7-1376f913852c: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:37Z WARNING 2137aa1c-afd4-49ea-988c-63b951edd706: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:37Z WARNING [115/376] 2137aa1c-afd4-49ea-988c-63b951edd706: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:37Z WARNING 2137fbbe-c3cc-4c89-8e08-459539a3acc3: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:37Z WARNING [116/376] 2137fbbe-c3cc-4c89-8e08-459539a3acc3: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:37Z WARNING 2138274f-c607-4b27-8937-c09f152aade2: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:37Z WARNING [117/376] 2138274f-c607-4b27-8937-c09f152aade2: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:37Z WARNING 213925cf-dc97-4820-a5f8-2cf8710809fc: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:37Z WARNING [118/376] 213925cf-dc97-4820-a5f8-2cf8710809fc: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:38Z WARNING 213aca54-388e-49fe-afd0-fbea5bc8a362: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:38Z WARNING [119/376] 213aca54-388e-49fe-afd0-fbea5bc8a362: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:38Z WARNING 213ad806-1fc6-45c1-929d-d73804fb7d20: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:38Z WARNING [120/376] 213ad806-1fc6-45c1-929d-d73804fb7d20: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:38Z WARNING 213b4544-25d4-442a-9f06-4cc80d122a2a: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:38Z WARNING [121/376] 213b4544-25d4-442a-9f06-4cc80d122a2a: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:38Z WARNING 213cdf25-9561-47e6-a932-94cf0ca867c4: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:38Z WARNING [122/376] 213cdf25-9561-47e6-a932-94cf0ca867c4: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:38Z WARNING 213ce006-5a14-4e1e-bced-8629348d00d3: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:38Z WARNING [123/376] 213ce006-5a14-4e1e-bced-8629348d00d3: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:38Z WARNING 213d9633-57cf-4fe6-b1a7-72c2a17aabd2: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:38Z WARNING [124/376] 213d9633-57cf-4fe6-b1a7-72c2a17aabd2: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:38Z WARNING 213e25a9-0ed8-42f0-b13e-5a118ea987f1: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:38Z WARNING [125/376] 213e25a9-0ed8-42f0-b13e-5a118ea987f1: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:39Z WARNING 213e5304-6438-45a7-b1db-f23e55c2bd66: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:39Z WARNING [126/376] 213e5304-6438-45a7-b1db-f23e55c2bd66: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:39Z WARNING 213f24a1-f422-4fa1-8657-f22c773745cb: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:39Z WARNING [127/376] 213f24a1-f422-4fa1-8657-f22c773745cb: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:39Z WARNING 213f2598-137d-4485-b83e-37934a05cef7: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:39Z WARNING [128/376] 213f2598-137d-4485-b83e-37934a05cef7: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:39Z WARNING 213fb80a-7756-4b14-a4c1-82c41f9f5046: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:39Z WARNING [129/376] 213fb80a-7756-4b14-a4c1-82c41f9f5046: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:39Z WARNING 213fbed4-3056-431f-8ccc-867c9c70a7a8: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:39Z WARNING [130/376] 213fbed4-3056-431f-8ccc-867c9c70a7a8: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:39Z WARNING 21401041-196d-4750-9496-aba3d76354cb: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:39Z WARNING [131/376] 21401041-196d-4750-9496-aba3d76354cb: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:40Z WARNING 21406f7c-1704-4143-804a-eb4e6e9dfbba: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:40Z WARNING [132/376] 21406f7c-1704-4143-804a-eb4e6e9dfbba: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:40Z WARNING 21408218-c9a6-4204-99e4-50d6faa31fd3: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:40Z WARNING [133/376] 21408218-c9a6-4204-99e4-50d6faa31fd3: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:40Z WARNING 21411c76-e3c2-43f1-b693-bded5e3864fe: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:40Z WARNING [134/376] 21411c76-e3c2-43f1-b693-bded5e3864fe: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:40Z WARNING 21425b21-ba47-4318-ac20-13390cf02267: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:40Z WARNING [135/376] 21425b21-ba47-4318-ac20-13390cf02267: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:40Z WARNING 21428e59-9e98-4900-82cf-e4432125219a: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:40Z WARNING [136/376] 21428e59-9e98-4900-82cf-e4432125219a: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:40Z WARNING 2142c0d1-7068-432c-9060-a6ec148ed714: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:40Z WARNING [137/376] 2142c0d1-7068-432c-9060-a6ec148ed714: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:40Z WARNING 21434d81-b3d0-4d11-8dcc-e62392c79c92: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:40Z WARNING [138/376] 21434d81-b3d0-4d11-8dcc-e62392c79c92: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:41Z WARNING 2143c40c-bfd6-4093-b2ce-c5f01d2f2813: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:41Z WARNING [139/376] 2143c40c-bfd6-4093-b2ce-c5f01d2f2813: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:41Z WARNING 2143e60d-cac9-43ba-bb5b-3be1cfb47db2: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:41Z WARNING [140/376] 2143e60d-cac9-43ba-bb5b-3be1cfb47db2: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:41Z WARNING 21446be3-708a-4377-b168-a5959ea8c1ef: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:41Z WARNING [141/376] 21446be3-708a-4377-b168-a5959ea8c1ef: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:41Z WARNING 214489b6-8ad6-43e1-9bc0-002959793426: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:41Z WARNING [142/376] 214489b6-8ad6-43e1-9bc0-002959793426: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:41Z WARNING 2144a523-a1f4-4f87-ada4-d1db3c95beee: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:41Z WARNING [143/376] 2144a523-a1f4-4f87-ada4-d1db3c95beee: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:41Z WARNING 21452d83-76e9-438a-b26f-dca7b25286e3: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:41Z WARNING [144/376] 21452d83-76e9-438a-b26f-dca7b25286e3: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:41Z WARNING 21455a1e-ce9c-4a16-9c00-d4075bb926f1: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:41Z WARNING [145/376] 21455a1e-ce9c-4a16-9c00-d4075bb926f1: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:42Z WARNING 2145aefe-a40a-45b9-a35f-74b2c740cf03: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:42Z WARNING [146/376] 2145aefe-a40a-45b9-a35f-74b2c740cf03: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:42Z WARNING 2146211f-c620-47e8-9db5-dadd4422b615: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:42Z WARNING [147/376] 2146211f-c620-47e8-9db5-dadd4422b615: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:42Z WARNING 21468f31-37e4-414b-90cf-79cc65bd713a: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:42Z WARNING [148/376] 21468f31-37e4-414b-90cf-79cc65bd713a: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:42Z WARNING 2147a217-ae9d-4882-ac9e-09c338eb94a8: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:42Z WARNING [149/376] 2147a217-ae9d-4882-ac9e-09c338eb94a8: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:42Z WARNING 214840d9-8c21-479b-823b-ac90419c2415: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:42Z WARNING [150/376] 214840d9-8c21-479b-823b-ac90419c2415: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:42Z INFO [150/376] 214840d9-8c21-479b-823b-ac90419c2415: checkpointed 60602 records.
+2026-10-01T03:44:42Z WARNING 2148ae3f-5dfe-4e12-b5d4-322f456d9655: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:42Z WARNING [151/376] 2148ae3f-5dfe-4e12-b5d4-322f456d9655: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:43Z WARNING 2148ba03-b2b2-46e3-bd0e-78c105498e80: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:43Z WARNING [152/376] 2148ba03-b2b2-46e3-bd0e-78c105498e80: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:43Z WARNING 2148fa97-99ea-427a-b274-96fd80ec9ac4: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:43Z WARNING [153/376] 2148fa97-99ea-427a-b274-96fd80ec9ac4: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:43Z WARNING 2148fb80-7f30-496d-9817-a7b367b14ef1: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:43Z WARNING [154/376] 2148fb80-7f30-496d-9817-a7b367b14ef1: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:43Z WARNING 2149578f-0b2d-4e8d-8d85-13c244d822c0: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:43Z WARNING [155/376] 2149578f-0b2d-4e8d-8d85-13c244d822c0: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:43Z WARNING 21497f37-abf2-4f0d-81f0-e74b33eecc8c: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:43Z WARNING [156/376] 21497f37-abf2-4f0d-81f0-e74b33eecc8c: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:43Z WARNING 214a616a-61a2-4975-82c5-0ecfb76cbdb4: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:43Z WARNING [157/376] 214a616a-61a2-4975-82c5-0ecfb76cbdb4: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:43Z WARNING 214aff04-aff9-4755-a875-4a56aa5f472f: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:43Z WARNING [158/376] 214aff04-aff9-4755-a875-4a56aa5f472f: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:44Z WARNING 214b86ab-350a-45fd-8e98-90973f051d6c: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:44Z WARNING [159/376] 214b86ab-350a-45fd-8e98-90973f051d6c: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:44Z WARNING 214bba6c-0983-4c51-935e-815ff1c37fb9: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:44Z WARNING [160/376] 214bba6c-0983-4c51-935e-815ff1c37fb9: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:44Z WARNING 214bd924-c8e3-4a15-8161-3f628f93562a: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:44Z WARNING [161/376] 214bd924-c8e3-4a15-8161-3f628f93562a: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:44Z WARNING 214c05d1-5947-44ac-b731-e4874add2bfa: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:44Z WARNING [162/376] 214c05d1-5947-44ac-b731-e4874add2bfa: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:44Z WARNING 214d20d2-4288-4106-b075-c009700a2bfa: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:44Z WARNING [163/376] 214d20d2-4288-4106-b075-c009700a2bfa: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:44Z WARNING 214d5450-59bb-4294-948f-6929501a8c1b: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:44Z WARNING [164/376] 214d5450-59bb-4294-948f-6929501a8c1b: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:44Z WARNING 214d9ef5-8ad2-4d33-8e96-094a9b7bacd6: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:44Z WARNING [165/376] 214d9ef5-8ad2-4d33-8e96-094a9b7bacd6: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:45Z WARNING 214dd68b-cdd2-4ebb-ab39-b4a8f025bdd6: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:45Z WARNING [166/376] 214dd68b-cdd2-4ebb-ab39-b4a8f025bdd6: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:45Z WARNING 214df875-a1f1-48ff-99e6-4698cd0eae1b: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:45Z WARNING [167/376] 214df875-a1f1-48ff-99e6-4698cd0eae1b: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:45Z WARNING 214e1989-0787-494a-a1d8-fef8cb90e328: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:45Z WARNING [168/376] 214e1989-0787-494a-a1d8-fef8cb90e328: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:45Z WARNING 214e9b8b-fcee-4bfa-9860-8d285b2ac7ad: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:45Z WARNING [169/376] 214e9b8b-fcee-4bfa-9860-8d285b2ac7ad: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:45Z WARNING 214fa2f5-cb61-45a0-b16c-76b36143aef7: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:45Z WARNING [170/376] 214fa2f5-cb61-45a0-b16c-76b36143aef7: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:45Z WARNING 215158e6-a94f-46b2-b0fb-3736ca892828: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:45Z WARNING [171/376] 215158e6-a94f-46b2-b0fb-3736ca892828: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:45Z WARNING 21516a5f-46b6-4d48-a785-95828fc89035: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:45Z WARNING [172/376] 21516a5f-46b6-4d48-a785-95828fc89035: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:46Z WARNING 21518c69-1f22-4946-a052-577707a3bde2: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:46Z WARNING [173/376] 21518c69-1f22-4946-a052-577707a3bde2: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:46Z WARNING 21526288-ee57-43f1-b4f3-fd8800374277: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:46Z WARNING [174/376] 21526288-ee57-43f1-b4f3-fd8800374277: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:46Z WARNING 2152f767-f889-489e-b610-28482442c0ab: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:46Z WARNING [175/376] 2152f767-f889-489e-b610-28482442c0ab: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:46Z WARNING 21536844-cf6a-415a-8dde-74db319f6fa0: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:46Z WARNING [176/376] 21536844-cf6a-415a-8dde-74db319f6fa0: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:46Z WARNING 21541f52-a6a7-4e0a-b189-03b6201d5522: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:46Z WARNING [177/376] 21541f52-a6a7-4e0a-b189-03b6201d5522: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:46Z WARNING 21542a19-2c04-4710-b2d3-874bad5ba7e0: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:46Z WARNING [178/376] 21542a19-2c04-4710-b2d3-874bad5ba7e0: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:46Z WARNING 2154c8ec-3fc6-4165-8bb5-a05cf69d55ac: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:46Z WARNING [179/376] 2154c8ec-3fc6-4165-8bb5-a05cf69d55ac: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:47Z WARNING 215696ee-7b44-4e7a-aaae-acea758a71fe: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:47Z WARNING [180/376] 215696ee-7b44-4e7a-aaae-acea758a71fe: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:47Z WARNING 21570409-422e-4201-80a6-9e8eec538dcf: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:47Z WARNING [181/376] 21570409-422e-4201-80a6-9e8eec538dcf: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:47Z WARNING 215766ad-9030-40b9-b0c3-f363c36751e5: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:47Z WARNING [182/376] 215766ad-9030-40b9-b0c3-f363c36751e5: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:47Z WARNING 21576d55-946f-45dd-995b-88b2400b274f: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:47Z WARNING [183/376] 21576d55-946f-45dd-995b-88b2400b274f: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:47Z WARNING 2157ac95-d290-417e-b8ff-c52a1b8e2301: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:47Z WARNING [184/376] 2157ac95-d290-417e-b8ff-c52a1b8e2301: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:47Z WARNING 2157d266-b7a1-4490-9c40-6402cd05eafe: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:47Z WARNING [185/376] 2157d266-b7a1-4490-9c40-6402cd05eafe: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:47Z WARNING 2157e8c5-14a9-479f-b41d-fbf610f95710: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:47Z WARNING [186/376] 2157e8c5-14a9-479f-b41d-fbf610f95710: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:48Z WARNING 21582144-021a-430d-8691-c081c9769413: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:48Z WARNING [187/376] 21582144-021a-430d-8691-c081c9769413: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:48Z WARNING 21589d52-9508-497c-ad2a-1580797b6afa: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:48Z WARNING [188/376] 21589d52-9508-497c-ad2a-1580797b6afa: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:48Z WARNING 2159f963-ed51-4231-953b-7f64e626ad71: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:48Z WARNING [189/376] 2159f963-ed51-4231-953b-7f64e626ad71: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:48Z WARNING 215adaf8-e75c-4eb8-bf4e-8f6af03f5d63: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:48Z WARNING [190/376] 215adaf8-e75c-4eb8-bf4e-8f6af03f5d63: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:48Z WARNING 215ae2f8-3046-4f08-835a-cf055b7ee00a: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:48Z WARNING [191/376] 215ae2f8-3046-4f08-835a-cf055b7ee00a: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:48Z WARNING 215b042a-a949-46b8-ac59-5bfbc8c81aaf: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:48Z WARNING [192/376] 215b042a-a949-46b8-ac59-5bfbc8c81aaf: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:48Z WARNING 215b1481-f707-4acd-802e-4e4e4baff60e: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:48Z WARNING [193/376] 215b1481-f707-4acd-802e-4e4e4baff60e: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:49Z WARNING 215c1ae4-ffb4-4520-9e82-f3ea22c5b8a0: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:49Z WARNING [194/376] 215c1ae4-ffb4-4520-9e82-f3ea22c5b8a0: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:49Z WARNING 215c1f1d-83f8-4f2a-bab4-6f1a3e7c454e: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:49Z WARNING [195/376] 215c1f1d-83f8-4f2a-bab4-6f1a3e7c454e: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:49Z WARNING 215c2225-98cf-42b0-94f9-f7dfb75a4209: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:49Z WARNING [196/376] 215c2225-98cf-42b0-94f9-f7dfb75a4209: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:49Z WARNING 215c3538-b2b5-49bb-89fa-7b7e1dece909: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:49Z WARNING [197/376] 215c3538-b2b5-49bb-89fa-7b7e1dece909: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:49Z WARNING 215c59c9-2f81-4876-bd73-87af48f4e4ba: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:49Z WARNING [198/376] 215c59c9-2f81-4876-bd73-87af48f4e4ba: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:49Z WARNING 215cd745-6fe6-43da-b6d4-e491f9d15245: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:49Z WARNING [199/376] 215cd745-6fe6-43da-b6d4-e491f9d15245: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:50Z WARNING 215cf033-aa9d-431c-aab5-e52fe952f1c6: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:50Z WARNING [200/376] 215cf033-aa9d-431c-aab5-e52fe952f1c6: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:50Z INFO [200/376] 215cf033-aa9d-431c-aab5-e52fe952f1c6: checkpointed 60602 records.
+2026-10-01T03:44:50Z WARNING 215d50a9-001f-4b3d-81e8-45e3b24ca21c: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:50Z WARNING [201/376] 215d50a9-001f-4b3d-81e8-45e3b24ca21c: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:50Z WARNING 215dd86e-2f59-404d-9f81-c7a0cbde27d2: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:50Z WARNING [202/376] 215dd86e-2f59-404d-9f81-c7a0cbde27d2: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:50Z WARNING 215f18b4-8ec9-4952-9df0-261f2e37a4d3: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:50Z WARNING [203/376] 215f18b4-8ec9-4952-9df0-261f2e37a4d3: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:50Z WARNING 215f50f9-dcad-4f89-b24e-34beeee50bb1: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:50Z WARNING [204/376] 215f50f9-dcad-4f89-b24e-34beeee50bb1: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:50Z WARNING 215fb449-5916-4eae-a8ed-7ef92e40b382: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:50Z WARNING [205/376] 215fb449-5916-4eae-a8ed-7ef92e40b382: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:50Z WARNING 215ffb78-7910-468f-ade7-07ae2978e8d2: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:50Z WARNING [206/376] 215ffb78-7910-468f-ade7-07ae2978e8d2: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:51Z WARNING 2160b91c-10ba-4cf5-b57f-09313aed3591: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:51Z WARNING [207/376] 2160b91c-10ba-4cf5-b57f-09313aed3591: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:51Z WARNING 2160f688-b926-49e9-abf8-618702c57c81: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:51Z WARNING [208/376] 2160f688-b926-49e9-abf8-618702c57c81: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:51Z WARNING 2161ca7b-af05-48d3-bbf9-e6dc3fdf1e79: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:51Z WARNING [209/376] 2161ca7b-af05-48d3-bbf9-e6dc3fdf1e79: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:51Z WARNING 21620d4d-60c6-4007-a403-992e10d16ec6: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:51Z WARNING [210/376] 21620d4d-60c6-4007-a403-992e10d16ec6: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:51Z WARNING 216355c3-fb9c-492c-a166-5c37b5cded59: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:51Z WARNING [211/376] 216355c3-fb9c-492c-a166-5c37b5cded59: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:51Z WARNING 216409a7-56f4-4f7a-ad49-ee882301e70c: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:51Z WARNING [212/376] 216409a7-56f4-4f7a-ad49-ee882301e70c: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:52Z WARNING 2164807b-fef5-46d6-ab5f-0d2572ce9086: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:52Z WARNING [213/376] 2164807b-fef5-46d6-ab5f-0d2572ce9086: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:52Z WARNING 2164ff02-843a-47e6-a383-7dfd505f2a65: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:52Z WARNING [214/376] 2164ff02-843a-47e6-a383-7dfd505f2a65: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:52Z WARNING 216708d6-3606-4eba-a8e2-c308d266667c: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:52Z WARNING [215/376] 216708d6-3606-4eba-a8e2-c308d266667c: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:52Z WARNING 21670e33-d03f-415c-b9e4-cef3edf06d79: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:52Z WARNING [216/376] 21670e33-d03f-415c-b9e4-cef3edf06d79: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:52Z WARNING 216723e6-ba56-4706-a8a4-d2bc980d626c: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:52Z WARNING [217/376] 216723e6-ba56-4706-a8a4-d2bc980d626c: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:52Z WARNING 2167410b-19d0-4a04-bf13-43623491dd40: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:52Z WARNING [218/376] 2167410b-19d0-4a04-bf13-43623491dd40: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:52Z WARNING 21675eed-88d1-4ca2-a38b-054bd5296c2b: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:52Z WARNING [219/376] 21675eed-88d1-4ca2-a38b-054bd5296c2b: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:52Z WARNING 2168384e-a5a5-4e1e-97e0-d3e2d701cc90: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:52Z WARNING [220/376] 2168384e-a5a5-4e1e-97e0-d3e2d701cc90: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:53Z WARNING 216859e2-fea0-4d20-b0ab-a5b04af17212: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:53Z WARNING [221/376] 216859e2-fea0-4d20-b0ab-a5b04af17212: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:53Z WARNING 2168e9db-504a-4a08-8915-cfe064d89dd1: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:53Z WARNING [222/376] 2168e9db-504a-4a08-8915-cfe064d89dd1: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:53Z WARNING 21690179-2b97-4114-9906-2dabb20b0b0b: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:53Z WARNING [223/376] 21690179-2b97-4114-9906-2dabb20b0b0b: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:53Z WARNING 21699246-bf43-4229-bc11-5d420b69a4fe: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:53Z WARNING [224/376] 21699246-bf43-4229-bc11-5d420b69a4fe: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:53Z WARNING 2169a45a-687c-4fa2-87da-6839acbb9800: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:53Z WARNING [225/376] 2169a45a-687c-4fa2-87da-6839acbb9800: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:53Z WARNING 2169a508-52f6-4268-acf5-0f022abcee59: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:53Z WARNING [226/376] 2169a508-52f6-4268-acf5-0f022abcee59: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:53Z WARNING 216a324a-18a0-4536-a2c2-55df8bb955e4: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:53Z WARNING [227/376] 216a324a-18a0-4536-a2c2-55df8bb955e4: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:54Z WARNING 216adb4a-bb43-4cf9-a0ab-1d1d6d7bc5c0: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:54Z WARNING [228/376] 216adb4a-bb43-4cf9-a0ab-1d1d6d7bc5c0: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:54Z WARNING 216daa48-edac-4e2a-949a-37a60e1bf387: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:54Z WARNING [229/376] 216daa48-edac-4e2a-949a-37a60e1bf387: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:54Z WARNING 216e17b9-8534-49be-9866-65229d57c6ae: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:54Z WARNING [230/376] 216e17b9-8534-49be-9866-65229d57c6ae: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:54Z WARNING 216e61f3-7876-450a-8d43-d32195d56058: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:54Z WARNING [231/376] 216e61f3-7876-450a-8d43-d32195d56058: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:54Z WARNING 216f19ba-67fb-4569-a711-9e7b64556bf5: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:54Z WARNING [232/376] 216f19ba-67fb-4569-a711-9e7b64556bf5: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:54Z WARNING 216f4c74-ae90-45aa-bcf2-b12781fbdb0d: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:54Z WARNING [233/376] 216f4c74-ae90-45aa-bcf2-b12781fbdb0d: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:55Z WARNING 21700922-8a91-4dab-965c-50db239cb4cb: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:55Z WARNING [234/376] 21700922-8a91-4dab-965c-50db239cb4cb: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:55Z WARNING 21719eaa-db66-41a2-9caf-19fcda2786bd: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:55Z WARNING [235/376] 21719eaa-db66-41a2-9caf-19fcda2786bd: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:55Z WARNING 2171e2ad-26d9-4982-866c-42fa2118f60a: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:55Z WARNING [236/376] 2171e2ad-26d9-4982-866c-42fa2118f60a: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:55Z WARNING 2172426d-2fef-4f31-8f96-19e53c3236d3: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:55Z WARNING [237/376] 2172426d-2fef-4f31-8f96-19e53c3236d3: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:55Z WARNING 2172cecc-5c63-45cf-8d01-2cb89f1ca0ba: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:55Z WARNING [238/376] 2172cecc-5c63-45cf-8d01-2cb89f1ca0ba: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:55Z WARNING 2173c0b2-d5c7-4a57-943d-d5d203bf15c4: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:55Z WARNING [239/376] 2173c0b2-d5c7-4a57-943d-d5d203bf15c4: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:55Z WARNING 2174a616-1c1d-478c-af4b-93dec6962d43: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:55Z WARNING [240/376] 2174a616-1c1d-478c-af4b-93dec6962d43: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:56Z WARNING 21759b01-37cb-4334-ada1-e70aba9c4541: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:56Z WARNING [241/376] 21759b01-37cb-4334-ada1-e70aba9c4541: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:56Z WARNING 2175bccf-6bc5-44c9-ab00-37f13b18b523: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:56Z WARNING [242/376] 2175bccf-6bc5-44c9-ab00-37f13b18b523: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:56Z WARNING 217637b8-5d78-49b3-a3d1-d474d51a3085: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:56Z WARNING [243/376] 217637b8-5d78-49b3-a3d1-d474d51a3085: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:56Z WARNING 21764f5d-7248-44be-88bd-9fa81bb6f298: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:56Z WARNING [244/376] 21764f5d-7248-44be-88bd-9fa81bb6f298: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:56Z WARNING 217685cf-21ed-4bb9-8d10-d18c9c17fdc3: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:56Z WARNING [245/376] 217685cf-21ed-4bb9-8d10-d18c9c17fdc3: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:56Z WARNING 2176a8da-0788-42b1-bef6-c4715e464cd4: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:56Z WARNING [246/376] 2176a8da-0788-42b1-bef6-c4715e464cd4: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:56Z WARNING 217728d8-f955-4160-b625-584d35d12217: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:56Z WARNING [247/376] 217728d8-f955-4160-b625-584d35d12217: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:57Z WARNING 21775d32-2668-47db-b094-12274e6319bf: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:57Z WARNING [248/376] 21775d32-2668-47db-b094-12274e6319bf: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:57Z WARNING 21777d5f-5812-41b6-b1e0-44bd80cfef5f: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:57Z WARNING [249/376] 21777d5f-5812-41b6-b1e0-44bd80cfef5f: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:57Z WARNING 217789c2-6e76-415f-bd3f-1f21aebaa0d5: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:57Z WARNING [250/376] 217789c2-6e76-415f-bd3f-1f21aebaa0d5: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:57Z INFO [250/376] 217789c2-6e76-415f-bd3f-1f21aebaa0d5: checkpointed 60602 records.
+2026-10-01T03:44:57Z WARNING 2177906a-2596-4095-9a76-6cdbdf0edb96: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:57Z WARNING [251/376] 2177906a-2596-4095-9a76-6cdbdf0edb96: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:57Z WARNING 2178ed93-47a7-4433-ad25-da33c7af0406: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:57Z WARNING [252/376] 2178ed93-47a7-4433-ad25-da33c7af0406: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:57Z WARNING 217901e4-01d4-465d-a8c7-249be55af466: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:57Z WARNING [253/376] 217901e4-01d4-465d-a8c7-249be55af466: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:57Z WARNING 2179b2bd-73d0-402b-b80b-7871d4b3a227: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:57Z WARNING [254/376] 2179b2bd-73d0-402b-b80b-7871d4b3a227: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:58Z WARNING 2179c0f0-5e97-4008-9f85-79a9aa068e07: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:58Z WARNING [255/376] 2179c0f0-5e97-4008-9f85-79a9aa068e07: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:58Z WARNING 217b9cd4-6e53-449a-b016-e419b50c335c: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:58Z WARNING [256/376] 217b9cd4-6e53-449a-b016-e419b50c335c: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:58Z WARNING 217c05c4-ebab-498e-bd21-0826dd818d49: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:58Z WARNING [257/376] 217c05c4-ebab-498e-bd21-0826dd818d49: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:58Z WARNING 217c14fb-d039-48f1-a85a-0b3a553e673f: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:58Z WARNING [258/376] 217c14fb-d039-48f1-a85a-0b3a553e673f: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:58Z WARNING 217c4ced-b145-4748-8c6a-cafdbb071a52: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:58Z WARNING [259/376] 217c4ced-b145-4748-8c6a-cafdbb071a52: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:58Z WARNING 217daae8-a3c4-4d60-94e1-c4b23317c5b6: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:58Z WARNING [260/376] 217daae8-a3c4-4d60-94e1-c4b23317c5b6: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:59Z WARNING 217e5e92-e7af-4f96-87ff-4c014b0e3d8c: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:59Z WARNING [261/376] 217e5e92-e7af-4f96-87ff-4c014b0e3d8c: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:59Z WARNING 217eb747-a301-4e2d-8291-37dede79d8f9: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:59Z WARNING [262/376] 217eb747-a301-4e2d-8291-37dede79d8f9: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:59Z WARNING 217f0baf-8f74-4075-ada1-f2c46d363a5b: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:59Z WARNING [263/376] 217f0baf-8f74-4075-ada1-f2c46d363a5b: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:59Z WARNING 217f8e57-25ba-4795-80ea-04749e94796d: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:59Z WARNING [264/376] 217f8e57-25ba-4795-80ea-04749e94796d: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:59Z WARNING 2180c778-71f3-479c-8eaf-18ba957301d0: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:59Z WARNING [265/376] 2180c778-71f3-479c-8eaf-18ba957301d0: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:59Z WARNING 218113a3-cd6c-4ab0-bfa2-0fdf812ad899: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:59Z WARNING [266/376] 218113a3-cd6c-4ab0-bfa2-0fdf812ad899: leaving unrecorded for a later run to retry.
+2026-10-01T03:44:59Z WARNING 218128c2-2d49-4378-a9cd-c368f3147f69: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:44:59Z WARNING [267/376] 218128c2-2d49-4378-a9cd-c368f3147f69: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:00Z WARNING 2181a1e5-384d-42e3-acf6-e1aee0c9f479: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:00Z WARNING [268/376] 2181a1e5-384d-42e3-acf6-e1aee0c9f479: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:00Z WARNING 2181c9c3-db99-4724-9170-e4269102fd52: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:00Z WARNING [269/376] 2181c9c3-db99-4724-9170-e4269102fd52: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:00Z WARNING 2182068a-d103-4274-a8cd-e0809a6933c4: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:00Z WARNING [270/376] 2182068a-d103-4274-a8cd-e0809a6933c4: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:00Z WARNING 218275b9-e954-4a62-988f-b3c8a23d6c24: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:00Z WARNING [271/376] 218275b9-e954-4a62-988f-b3c8a23d6c24: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:00Z WARNING 2182a40a-c849-4dfb-8e3c-6ff797b5c89d: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:00Z WARNING [272/376] 2182a40a-c849-4dfb-8e3c-6ff797b5c89d: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:00Z WARNING 218327c0-de59-47da-bf3e-68f06200a093: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:00Z WARNING [273/376] 218327c0-de59-47da-bf3e-68f06200a093: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:01Z WARNING 2184f80b-0485-44d8-b596-2c3632912376: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:01Z WARNING [274/376] 2184f80b-0485-44d8-b596-2c3632912376: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:01Z WARNING 218505fe-ca46-4e00-8e28-7bfeeaea7cc1: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:01Z WARNING [275/376] 218505fe-ca46-4e00-8e28-7bfeeaea7cc1: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:01Z WARNING 21854ef5-a998-4386-aeab-97574352c341: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:01Z WARNING [276/376] 21854ef5-a998-4386-aeab-97574352c341: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:01Z WARNING 2185d4e7-3827-464e-a4ac-415a80af0ed0: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:01Z WARNING [277/376] 2185d4e7-3827-464e-a4ac-415a80af0ed0: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:01Z WARNING 21862b90-b837-4ada-9275-d73745dd72ae: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:01Z WARNING [278/376] 21862b90-b837-4ada-9275-d73745dd72ae: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:01Z WARNING 2187c700-98a2-4532-8fc4-1abe495aa312: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:01Z WARNING [279/376] 2187c700-98a2-4532-8fc4-1abe495aa312: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:02Z WARNING 2189198e-c16c-4227-8164-1c418f8d8405: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:02Z WARNING [280/376] 2189198e-c16c-4227-8164-1c418f8d8405: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:02Z WARNING 218944b8-de7c-494f-95ef-875f9901311d: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:02Z WARNING [281/376] 218944b8-de7c-494f-95ef-875f9901311d: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:02Z WARNING 218976b0-0eb8-4c3b-8052-81f485432fd3: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:02Z WARNING [282/376] 218976b0-0eb8-4c3b-8052-81f485432fd3: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:02Z WARNING 218981da-5041-4992-bdd5-8a7c245af9a2: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:02Z WARNING [283/376] 218981da-5041-4992-bdd5-8a7c245af9a2: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:02Z WARNING 218a24b4-8ac4-44c5-a175-0ae6c2a1c8d6: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:02Z WARNING [284/376] 218a24b4-8ac4-44c5-a175-0ae6c2a1c8d6: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:02Z WARNING 218c2506-d088-4168-aa16-d92dc6ad8c95: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:02Z WARNING [285/376] 218c2506-d088-4168-aa16-d92dc6ad8c95: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:02Z WARNING 218d4094-cca2-4c11-9c16-93300030b217: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:02Z WARNING [286/376] 218d4094-cca2-4c11-9c16-93300030b217: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:03Z WARNING 218d9909-be91-41d7-888a-40828ce9c813: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:03Z WARNING [287/376] 218d9909-be91-41d7-888a-40828ce9c813: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:03Z WARNING 219041ee-edd1-4be1-9ed1-900eb0eecdfa: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:03Z WARNING [288/376] 219041ee-edd1-4be1-9ed1-900eb0eecdfa: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:03Z WARNING 21906ad7-9d1c-4db5-b820-dd96038600d3: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:03Z WARNING [289/376] 21906ad7-9d1c-4db5-b820-dd96038600d3: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:03Z WARNING 21913a95-05b5-40bf-866c-f86c48ead207: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:03Z WARNING [290/376] 21913a95-05b5-40bf-866c-f86c48ead207: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:03Z WARNING 21918863-db16-4fb8-99c7-d8d4b95efce4: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:03Z WARNING [291/376] 21918863-db16-4fb8-99c7-d8d4b95efce4: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:03Z WARNING 21919464-4c82-4525-9275-8a81a2550395: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:03Z WARNING [292/376] 21919464-4c82-4525-9275-8a81a2550395: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:04Z WARNING 2191b4d8-ee69-4268-a60e-9d58b651f894: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:04Z WARNING [293/376] 2191b4d8-ee69-4268-a60e-9d58b651f894: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:04Z WARNING 219261cd-dd59-4b24-96fb-5922cdc0c525: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:04Z WARNING [294/376] 219261cd-dd59-4b24-96fb-5922cdc0c525: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:04Z WARNING 2193b13f-f076-405f-a86b-dbc6acca4392: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:04Z WARNING [295/376] 2193b13f-f076-405f-a86b-dbc6acca4392: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:04Z WARNING 2193b215-7f49-46df-9984-ddf10bac6c14: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:04Z WARNING [296/376] 2193b215-7f49-46df-9984-ddf10bac6c14: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:04Z WARNING 21942254-07f2-4954-b4a6-037e7b2fefe1: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:04Z WARNING [297/376] 21942254-07f2-4954-b4a6-037e7b2fefe1: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:04Z WARNING 219482f9-3b20-4bc2-a739-ddd999db50d8: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:04Z WARNING [298/376] 219482f9-3b20-4bc2-a739-ddd999db50d8: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:04Z WARNING 21951fe6-9a8d-4e3f-b036-3404dac7a305: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:04Z WARNING [299/376] 21951fe6-9a8d-4e3f-b036-3404dac7a305: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:05Z WARNING 2195f87f-45c3-411e-b4ac-35e337dd881b: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:05Z WARNING [300/376] 2195f87f-45c3-411e-b4ac-35e337dd881b: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:05Z INFO [300/376] 2195f87f-45c3-411e-b4ac-35e337dd881b: checkpointed 60602 records.
+2026-10-01T03:45:05Z WARNING 2196012c-42fd-4d1f-b13e-21bb8e7522a5: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:05Z WARNING [301/376] 2196012c-42fd-4d1f-b13e-21bb8e7522a5: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:05Z WARNING 2196c6b6-d42e-4c14-b475-ffa828370699: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:05Z WARNING [302/376] 2196c6b6-d42e-4c14-b475-ffa828370699: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:05Z WARNING 2196cfde-e0bd-48d8-b6e4-c3032cdd1d74: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:05Z WARNING [303/376] 2196cfde-e0bd-48d8-b6e4-c3032cdd1d74: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:05Z WARNING 2197158e-994f-442c-8348-b7db5c746d2d: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:05Z WARNING [304/376] 2197158e-994f-442c-8348-b7db5c746d2d: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:05Z WARNING 2197a6f8-535a-4026-8409-a40a389a86c3: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:05Z WARNING [305/376] 2197a6f8-535a-4026-8409-a40a389a86c3: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:06Z WARNING 21981f72-1a1b-434c-8530-904db440a456: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:06Z WARNING [306/376] 21981f72-1a1b-434c-8530-904db440a456: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:06Z WARNING 219845ff-7af9-46f5-b8a9-5a061fe2f51c: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:06Z WARNING [307/376] 219845ff-7af9-46f5-b8a9-5a061fe2f51c: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:06Z WARNING 2198a07c-7655-4a79-a8d2-051f48fe3577: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:06Z WARNING [308/376] 2198a07c-7655-4a79-a8d2-051f48fe3577: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:06Z WARNING 2199bd44-2f1b-436c-b011-c6b77f77d95e: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:06Z WARNING [309/376] 2199bd44-2f1b-436c-b011-c6b77f77d95e: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:06Z WARNING 219afa0a-79ea-4d75-a5f6-478ad0633a77: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:06Z WARNING [310/376] 219afa0a-79ea-4d75-a5f6-478ad0633a77: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:06Z WARNING 219b5ed7-d137-45b5-9b13-a883ae279fb2: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:06Z WARNING [311/376] 219b5ed7-d137-45b5-9b13-a883ae279fb2: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:06Z WARNING 219c008e-fad4-4c2a-b41d-90dd34eb2cbe: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:06Z WARNING [312/376] 219c008e-fad4-4c2a-b41d-90dd34eb2cbe: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:06Z WARNING 219c8385-bef7-4794-988e-f4e792177a9d: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:06Z WARNING [313/376] 219c8385-bef7-4794-988e-f4e792177a9d: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:07Z WARNING 219c9fa7-8545-4369-9709-29d97c83eff3: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:07Z WARNING [314/376] 219c9fa7-8545-4369-9709-29d97c83eff3: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:07Z WARNING 219cde05-08d5-4501-95ba-861bd79cce0a: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:07Z WARNING [315/376] 219cde05-08d5-4501-95ba-861bd79cce0a: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:07Z WARNING 219ce184-cafc-4380-a031-4ebc9d5a042c: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:07Z WARNING [316/376] 219ce184-cafc-4380-a031-4ebc9d5a042c: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:07Z WARNING 219d7bfd-ca28-4377-bb9e-f58fd7694215: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:07Z WARNING [317/376] 219d7bfd-ca28-4377-bb9e-f58fd7694215: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:07Z WARNING 219dbdb7-228a-4a4f-96b1-3d82d81d085d: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:07Z WARNING [318/376] 219dbdb7-228a-4a4f-96b1-3d82d81d085d: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:07Z WARNING 219e21fc-06a3-40ac-928a-f9b60d756e8a: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:07Z WARNING [319/376] 219e21fc-06a3-40ac-928a-f9b60d756e8a: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:08Z WARNING 219fd017-baa2-4fd0-b679-1a64ba829433: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:08Z WARNING [320/376] 219fd017-baa2-4fd0-b679-1a64ba829433: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:08Z WARNING 21a04138-5449-4b5c-a4c5-84aed64d24d9: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:08Z WARNING [321/376] 21a04138-5449-4b5c-a4c5-84aed64d24d9: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:08Z WARNING 21a06613-f0a3-4513-900b-87c9318ce6d9: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:08Z WARNING [322/376] 21a06613-f0a3-4513-900b-87c9318ce6d9: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:08Z WARNING 21a0ff0d-e603-4c86-80d0-9888f08a1860: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:08Z WARNING [323/376] 21a0ff0d-e603-4c86-80d0-9888f08a1860: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:08Z WARNING 21a1383b-3c38-4b81-b29d-e99fdcf0bfe8: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:08Z WARNING [324/376] 21a1383b-3c38-4b81-b29d-e99fdcf0bfe8: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:08Z WARNING 21a26489-467d-4c79-b24b-d391a42b3b43: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:08Z WARNING [325/376] 21a26489-467d-4c79-b24b-d391a42b3b43: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:08Z WARNING 21a2cb5e-8323-47e9-87bb-c55d3f955837: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:08Z WARNING [326/376] 21a2cb5e-8323-47e9-87bb-c55d3f955837: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:09Z WARNING 21a36cd6-7731-419d-b1c6-92334b69375d: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:09Z WARNING [327/376] 21a36cd6-7731-419d-b1c6-92334b69375d: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:09Z WARNING 21a3bc54-7b2e-4c6d-9630-4d69ae43591a: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:09Z WARNING [328/376] 21a3bc54-7b2e-4c6d-9630-4d69ae43591a: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:09Z WARNING 21a3e2a6-302a-4c01-807f-e83c8c156315: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:09Z WARNING [329/376] 21a3e2a6-302a-4c01-807f-e83c8c156315: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:09Z WARNING 21a3f2a0-11ef-47f5-84fe-2c7445f53553: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:09Z WARNING [330/376] 21a3f2a0-11ef-47f5-84fe-2c7445f53553: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:09Z WARNING 21a45739-1738-407d-8bd6-9b703765743d: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:09Z WARNING [331/376] 21a45739-1738-407d-8bd6-9b703765743d: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:09Z WARNING 21a51b81-c892-48ff-947f-d86acbe9ea6e: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:09Z WARNING [332/376] 21a51b81-c892-48ff-947f-d86acbe9ea6e: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:09Z WARNING 21a5237f-32a9-4e08-944e-66ec6a755e5b: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:09Z WARNING [333/376] 21a5237f-32a9-4e08-944e-66ec6a755e5b: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:10Z WARNING 21a529c8-28bb-420d-8b2d-211c6e30953f: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:10Z WARNING [334/376] 21a529c8-28bb-420d-8b2d-211c6e30953f: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:10Z WARNING 21a52c0e-32c5-497f-b4c0-fa292132200f: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:10Z WARNING [335/376] 21a52c0e-32c5-497f-b4c0-fa292132200f: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:10Z WARNING 21a55905-c2f4-40bc-a4fa-24012c402fd7: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:10Z WARNING [336/376] 21a55905-c2f4-40bc-a4fa-24012c402fd7: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:10Z WARNING 21a65055-883e-4f84-8c98-a145a778e276: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:10Z WARNING [337/376] 21a65055-883e-4f84-8c98-a145a778e276: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:10Z WARNING 21a67965-8bc0-464c-a4d0-f2d4871a23a1: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:10Z WARNING [338/376] 21a67965-8bc0-464c-a4d0-f2d4871a23a1: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:10Z WARNING 21a72a6a-4633-42a7-bd00-82421b7e8323: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:10Z WARNING [339/376] 21a72a6a-4633-42a7-bd00-82421b7e8323: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:10Z WARNING 21a7c857-b6fa-4b6d-8c53-285601ed6af9: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:10Z WARNING [340/376] 21a7c857-b6fa-4b6d-8c53-285601ed6af9: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:11Z WARNING 21a918fd-09eb-4f21-baca-7b99f159b30a: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:11Z WARNING [341/376] 21a918fd-09eb-4f21-baca-7b99f159b30a: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:11Z WARNING 21a9ea57-4160-42e2-b93f-412fb35a2a0e: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:11Z WARNING [342/376] 21a9ea57-4160-42e2-b93f-412fb35a2a0e: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:11Z WARNING 21aa2fe8-6725-4a19-a0fe-e4ff8a7254d6: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:11Z WARNING [343/376] 21aa2fe8-6725-4a19-a0fe-e4ff8a7254d6: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:11Z WARNING 21aa3d03-bcfe-4fd8-ab9e-157f924352ef: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:11Z WARNING [344/376] 21aa3d03-bcfe-4fd8-ab9e-157f924352ef: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:11Z WARNING 21ab00ef-3907-4c8c-b36d-20a6b7aad243: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:11Z WARNING [345/376] 21ab00ef-3907-4c8c-b36d-20a6b7aad243: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:11Z WARNING 21ab9091-c331-4b98-bbb7-540ccbd8214c: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:11Z WARNING [346/376] 21ab9091-c331-4b98-bbb7-540ccbd8214c: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:11Z WARNING 21abe1be-c8f8-40a8-bf32-62d6c6abcdc5: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:11Z WARNING [347/376] 21abe1be-c8f8-40a8-bf32-62d6c6abcdc5: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:12Z WARNING 21ac44c2-e293-4429-b1e1-0d32904ec2c8: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:12Z WARNING [348/376] 21ac44c2-e293-4429-b1e1-0d32904ec2c8: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:12Z WARNING 21acb57f-2947-4f55-a2f3-ea089c3ca2fb: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:12Z WARNING [349/376] 21acb57f-2947-4f55-a2f3-ea089c3ca2fb: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:12Z WARNING 21aced19-f002-4c09-818f-2dba35a7ea3f: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:12Z WARNING [350/376] 21aced19-f002-4c09-818f-2dba35a7ea3f: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:12Z INFO [350/376] 21aced19-f002-4c09-818f-2dba35a7ea3f: checkpointed 60602 records.
+2026-10-01T03:45:12Z WARNING 21ad5124-9697-4279-8b89-e9bf7bc3098e: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:12Z WARNING [351/376] 21ad5124-9697-4279-8b89-e9bf7bc3098e: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:12Z WARNING 21ad8684-f018-403e-b919-0e57e3ccb5d4: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:12Z WARNING [352/376] 21ad8684-f018-403e-b919-0e57e3ccb5d4: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:12Z WARNING 21adaf5f-008f-4243-97e7-4cf793ac9b27: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:12Z WARNING [353/376] 21adaf5f-008f-4243-97e7-4cf793ac9b27: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:13Z WARNING 21ae654a-148a-4622-93a9-c8f607578818: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:13Z WARNING [354/376] 21ae654a-148a-4622-93a9-c8f607578818: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:13Z WARNING 21af8312-9247-4fb6-9451-ed142eaaa2e2: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:13Z WARNING [355/376] 21af8312-9247-4fb6-9451-ed142eaaa2e2: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:13Z WARNING 21afe056-c2e9-496d-bb7b-48de93a5dda2: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:13Z WARNING [356/376] 21afe056-c2e9-496d-bb7b-48de93a5dda2: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:13Z WARNING 21b10824-d00a-4755-adbb-24814cd15f7a: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:13Z WARNING [357/376] 21b10824-d00a-4755-adbb-24814cd15f7a: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:13Z WARNING 21b13a1d-5f35-41cd-af15-24a6253cb64a: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:13Z WARNING [358/376] 21b13a1d-5f35-41cd-af15-24a6253cb64a: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:13Z WARNING 21b1a0b4-d144-48aa-b76d-5ea98e298bad: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:13Z WARNING [359/376] 21b1a0b4-d144-48aa-b76d-5ea98e298bad: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:13Z WARNING 21b1be89-bc7f-486f-9047-278fd3372917: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:13Z WARNING [360/376] 21b1be89-bc7f-486f-9047-278fd3372917: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:14Z WARNING 21b1d934-c99b-4b14-bac1-76344ad4b715: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:14Z WARNING [361/376] 21b1d934-c99b-4b14-bac1-76344ad4b715: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:14Z WARNING 21b1e0ef-dfb4-4980-af9b-828a0f9396f4: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:14Z WARNING [362/376] 21b1e0ef-dfb4-4980-af9b-828a0f9396f4: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:14Z WARNING 21b234c5-6ef7-4fb6-a8c3-4b8f91d1cb56: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:14Z WARNING [363/376] 21b234c5-6ef7-4fb6-a8c3-4b8f91d1cb56: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:14Z WARNING 21b2742f-0b3b-4079-988a-4bded7bf0cec: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:14Z WARNING [364/376] 21b2742f-0b3b-4079-988a-4bded7bf0cec: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:14Z WARNING 21b2abe5-0bc2-4237-9121-a4b87369118f: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:14Z WARNING [365/376] 21b2abe5-0bc2-4237-9121-a4b87369118f: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:14Z WARNING 21b37330-ae77-4c67-ab52-9e7efe814317: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:14Z WARNING [366/376] 21b37330-ae77-4c67-ab52-9e7efe814317: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:14Z WARNING 21b3d8ce-f687-4302-8ed3-b7d2eb018748: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:14Z WARNING [367/376] 21b3d8ce-f687-4302-8ed3-b7d2eb018748: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:15Z WARNING 21b46a5d-e281-490d-807a-241755552d6f: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:15Z WARNING [368/376] 21b46a5d-e281-490d-807a-241755552d6f: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:15Z WARNING 21b4eab6-aee0-4a16-a533-858c9378cd63: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:15Z WARNING [369/376] 21b4eab6-aee0-4a16-a533-858c9378cd63: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:15Z WARNING 21b588e9-7a0a-4d39-8181-71662ab64f0e: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:15Z WARNING [370/376] 21b588e9-7a0a-4d39-8181-71662ab64f0e: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:15Z WARNING 21b5d2ef-b444-415c-afbd-f909a860fbfa: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:15Z WARNING [371/376] 21b5d2ef-b444-415c-afbd-f909a860fbfa: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:15Z WARNING 21b5f3e0-2ca1-49cd-9234-29d3b2351f78: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:15Z WARNING [372/376] 21b5f3e0-2ca1-49cd-9234-29d3b2351f78: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:15Z WARNING 21b679d3-92e5-4326-be4d-936056c6bad7: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:15Z WARNING [373/376] 21b679d3-92e5-4326-be4d-936056c6bad7: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:15Z WARNING 21b76b29-7edf-4a86-b5af-59a9366a36d4: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:15Z WARNING [374/376] 21b76b29-7edf-4a86-b5af-59a9366a36d4: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:16Z WARNING 21b8ed40-66bf-4890-8f72-0f5c975b7db6: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:16Z WARNING [375/376] 21b8ed40-66bf-4890-8f72-0f5c975b7db6: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:16Z WARNING 21b9b658-43ec-4842-9f83-130c7fc880df: failed while reading the ElectricalSeries rates (AttributeError: module 'spikeinterface.extractors' has no attribute 'NwbRecordingExtractor')
+2026-10-01T03:45:16Z WARNING [376/376] 21b9b658-43ec-4842-9f83-130c7fc880df: leaving unrecorded for a later run to retry.
+2026-10-01T03:45:16Z INFO Wrote 60602 records to /tmp/derivatives/qualifying_lfp_content_ids.jsonl (0 new, 376 failed) in 1.0 min (peak memory 211 MiB).
