@@ -33,8 +33,13 @@ name = "content-id-to-nwb-file"
 # Streaming every ElectricalSeries of a session is heavy, so a run advances the backlog by a
 # bounded batch. The workflow and the shell script each carried their own copy of this number; it
 # is declared once here.
+#
+# Sized from this cache's own update logs, slow items included: resampling 7,741 timed items puts a
+# run of 6000 at about 205 minutes typically and 219 at the 99th percentile, inside the job's
+# 330-minute timeout with margin. The margin matters, because a run that times out publishes nothing
+# it did.
 [operations.update]
-limit = 2000
+limit = 6000
 # A testing run opens each session's NWB file remotely, so two is enough to exercise the
 # whole path -- resolve, open, inspect the acquisition series -- without a slow smoke test.
 testing_limit = 2
