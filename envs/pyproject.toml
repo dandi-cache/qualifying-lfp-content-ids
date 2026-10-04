@@ -10,7 +10,13 @@
 name = "qualifying-lfp-content-ids"
 version = "0.1.0"
 requires-python = ">=3.13"
-dependencies = ["spikeinterface"]
+# Below 0.105, which stopped re-exporting the extractor classes from `spikeinterface.extractors`.
+# The library reads the ElectricalSeries paths through
+# `spikeinterface.extractors.NwbRecordingExtractor`, so an unpinned rebuild on 2026-09-28 picked
+# up 0.105 and failed every file with `AttributeError` until this pin. 0.104 still re-exports the
+# class, with a deprecation warning; lift the pin once the library imports it from
+# `spikeinterface.extractors.nwbextractors`, where it is defined.
+dependencies = ["spikeinterface<0.105"]
 
 [project.optional-dependencies]
 # Only for running outside the container: inside it, the library comes from the base image, and
