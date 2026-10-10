@@ -1,8 +1,9 @@
-"""This repository's own helpers for SpikeInterface: opening a file's recordings, and the check made of one.
+"""This repository's own helpers for SpikeInterface: opening a file's recordings, and the simple checks of one.
 
-`update.py` keeps the rule that decides a file; this module has the means. It opens each
-ElectricalSeries as a recording, and answers the one question the rule asks of a recording, so
-`update.py` reads without any of the SpikeInterface plumbing.
+`update.py` keeps the rules that carry the reasoning and the order they are applied in, which is
+what decides a file; this module has the means. It opens each ElectricalSeries as a recording,
+and answers the plain conditions asked of a recording, so `update.py` reads without the
+SpikeInterface plumbing.
 
 It is local on purpose, and named so: it stays in this repository, with the `spikeinterface` pin in
 `envs/pyproject.toml`, and is not for `dandi_cache_utils`, the shared upstream library, whose base
@@ -13,7 +14,7 @@ import collections.abc
 
 import spikeinterface.extractors
 
-#: Below this, a series is LFP or similar rather than something to spike sort.
+# Only series above this rate are spike-sorted by the pipeline; the rest, such as LFP, are ignored.
 RATE_THRESHOLD_HZ = 10_000
 
 #: Where an NWB file keeps what an instrument recorded, as opposed to what was derived from it.
@@ -37,6 +38,9 @@ def get_acquisition_recordings(url: str, /) -> collections.abc.Iterator:
             )
 
 
-def is_fast_enough_to_sort(recording, /) -> bool:
-    """Whether a series samples above the rate threshold, rather than being LFP or similar."""
+# Simple checks of one SpikeInterface recording, an ElectricalSeries of the file.
+
+
+def is_sorted_by_pipeline(recording, /) -> bool:
+    """Whether the pipeline spike-sorts this series at all, which only its sampling rate decides."""
     return recording.get_sampling_frequency() > RATE_THRESHOLD_HZ
