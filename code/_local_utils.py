@@ -14,7 +14,7 @@ import collections.abc
 
 import spikeinterface.extractors
 
-# Only series above this rate are spike-sorted by the pipeline; the rest, such as LFP, are ignored.
+#: Below this, a series is LFP or similar rather than something to spike sort.
 RATE_THRESHOLD_HZ = 10_000
 
 #: Where an NWB file keeps what an instrument recorded, as opposed to what was derived from it.
@@ -41,6 +41,6 @@ def get_acquisition_recordings(url: str, /) -> collections.abc.Iterator:
 # Simple checks of one SpikeInterface recording, an ElectricalSeries of the file.
 
 
-def is_sorted_by_pipeline(recording, /) -> bool:
-    """Whether the pipeline spike-sorts this series at all, which only its sampling rate decides."""
+def is_above_rate_threshold(recording, /) -> bool:
+    """Whether the series samples above the rate threshold, rather than being LFP or similar."""
     return recording.get_sampling_frequency() > RATE_THRESHOLD_HZ

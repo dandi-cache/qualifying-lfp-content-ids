@@ -27,9 +27,9 @@ STAGES = {
 
 
 def file_qualifies(url: str, /) -> bool:
-    """Whether any acquisition ElectricalSeries in the file samples above 10 kHz, the rate the pipeline sorts from."""
+    """Whether any acquisition ElectricalSeries in the file samples above the rate threshold."""
     return any(
-        _local_utils.is_sorted_by_pipeline(recording) for recording in _local_utils.get_acquisition_recordings(url)
+        _local_utils.is_above_rate_threshold(recording) for recording in _local_utils.get_acquisition_recordings(url)
     )
 
 
