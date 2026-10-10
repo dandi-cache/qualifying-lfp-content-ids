@@ -11,7 +11,7 @@ size-capped error logs, the incremental frontier, the output paths and testing m
 `dandi_cache_utils`, which the runtime image carries.
 """
 
-import _utils
+import _local_utils
 import dandi_cache_utils as dandi_cache
 
 #: The side output: which content IDs failed to be assessed, rather than failing to qualify.
@@ -25,18 +25,12 @@ STAGES = {
     "reading the ElectricalSeries rates": "spikeinterface_errors.txt",
 }
 
-#: Below this, a series is LFP or similar rather than something to spike sort.
-RATE_THRESHOLD_HZ = 10_000
-
-
-def is_fast_enough_to_sort(recording, /) -> bool:
-    """Whether a series samples above the rate threshold, rather than being LFP or similar."""
-    return recording.get_sampling_frequency() > RATE_THRESHOLD_HZ
-
 
 def file_qualifies(url: str, /) -> bool:
-    """Whether any acquisition ElectricalSeries in the file samples above the rate threshold."""
-    return any(is_fast_enough_to_sort(recording) for recording in _utils.get_acquisition_recordings(url))
+    """Whether any acquisition ElectricalSeries in the file samples above 10 kHz, the rate the pipeline sorts from."""
+    return any(
+        _local_utils.is_fast_enough_to_sort(recording) for recording in _local_utils.get_acquisition_recordings(url)
+    )
 
 
 def main() -> None:

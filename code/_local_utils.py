@@ -1,16 +1,20 @@
-"""Reading an NWB file's ElectricalSeries through SpikeInterface.
+"""This repository's own helpers for SpikeInterface: opening a file's recordings, and the check made of one.
 
-This is the one place that knows how SpikeInterface streams a remote file. `update.py` asks its
-question of the recordings yielded here and never opens one itself, so the rule there reads without
-any of the plumbing.
+`update.py` keeps the rule that decides a file; this module has the means. It opens each
+ElectricalSeries as a recording, and answers the one question the rule asks of a recording, so
+`update.py` reads without any of the SpikeInterface plumbing.
 
-It stays in this repository, with the `spikeinterface` pin in `envs/pyproject.toml`: it is not for
-`dandi_cache_utils`, whose base image does not carry SpikeInterface. See `AGENTS.md`.
+It is local on purpose, and named so: it stays in this repository, with the `spikeinterface` pin in
+`envs/pyproject.toml`, and is not for `dandi_cache_utils`, the shared upstream library, whose base
+image does not carry SpikeInterface. See `AGENTS.md`.
 """
 
 import collections.abc
 
 import spikeinterface.extractors
+
+#: Below this, a series is LFP or similar rather than something to spike sort.
+RATE_THRESHOLD_HZ = 10_000
 
 #: Where an NWB file keeps what an instrument recorded, as opposed to what was derived from it.
 ACQUISITION_PREFIX = "acquisition/"
@@ -31,3 +35,8 @@ def get_acquisition_recordings(url: str, /) -> collections.abc.Iterator:
             yield spikeinterface.extractors.NwbRecordingExtractor(
                 file_path=url, stream_mode="remfile", electrical_series_path=series_path
             )
+
+
+def is_fast_enough_to_sort(recording, /) -> bool:
+    """Whether a series samples above the rate threshold, rather than being LFP or similar."""
+    return recording.get_sampling_frequency() > RATE_THRESHOLD_HZ
