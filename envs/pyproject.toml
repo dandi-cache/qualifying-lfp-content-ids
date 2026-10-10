@@ -8,7 +8,7 @@
 
 [project]
 name = "qualifying-lfp-content-ids"
-version = "0.1.0"
+version = "0.1.1"
 requires-python = ">=3.13"
 # Below 0.105, which stopped re-exporting the extractor classes from
 # `spikeinterface.extractors`, where `code/_local_utils.py` constructs `NwbRecordingExtractor`. An
