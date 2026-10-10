@@ -1,0 +1,38 @@
+"""This repository's own helpers for SpikeInterface: opening a file's recordings, and the simple checks of one.
+
+`update.py` keeps the rules that carry the reasoning and the order they are applied in, which is
+what decides a file; this module has the means. It opens each ElectricalSeries as a recording,
+and answers the plain conditions asked of a recording, so `update.py` reads without the
+SpikeInterface plumbing.
+
+It is local on purpose, and named so: it stays in this repository, with the `spikeinterface` pin in
+`envs/pyproject.toml`, and is not for `dandi_cache_utils`, the shared upstream library, whose base
+image does not carry SpikeInterface. See `AGENTS.md`.
+"""
+
+import collections.abc
+
+import _globals
+import spikeinterface.extractors
+
+
+def get_acquisition_recordings(url: str, /) -> collections.abc.Iterator:
+    """Each ElectricalSeries in the file's acquisition group, as a SpikeInterface recording.
+
+    The series are listed up front, which reads the file's structure, but each is opened only as the
+    caller reaches it, so a caller that stops at the first series it needs never pays to open the
+    rest.
+    """
+    series_paths = spikeinterface.extractors.NwbRecordingExtractor.fetch_available_electrical_series_paths(
+        file_path=url, stream_mode="remfile"
+    )
+    for series_path in series_paths:
+        if series_path.startswith(_globals.ACQUISITION_PREFIX):
+            yield spikeinterface.extractors.NwbRecordingExtractor(
+                file_path=url, stream_mode="remfile", electrical_series_path=series_path
+            )
+
+
+def is_above_rate_threshold(recording, /) -> bool:
+    """Whether the series samples above the rate threshold, rather than being LFP or similar."""
+    return recording.get_sampling_frequency() > _globals.RATE_THRESHOLD_HZ

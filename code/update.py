@@ -11,8 +11,8 @@ size-capped error logs, the incremental frontier, the output paths and testing m
 `dandi_cache_utils`, which the runtime image carries.
 """
 
+import _local_utils
 import dandi_cache_utils as dandi_cache
-import spikeinterface.extractors
 
 #: The side output: which content IDs failed to be assessed, rather than failing to qualify.
 #: They are excluded from later runs, since a failure here repeats rather than resolves.
@@ -25,19 +25,12 @@ STAGES = {
     "reading the ElectricalSeries rates": "spikeinterface_errors.txt",
 }
 
-#: Below this, a series is LFP or similar rather than something to spike sort.
-RATE_THRESHOLD_HZ = 10_000
-
 
 def file_qualifies(url: str, /) -> bool:
     """Whether any acquisition ElectricalSeries in the file samples above the rate threshold."""
-    for electrical_series_path in dandi_cache.nwb.electrical_series_paths(url):
-        extractor = spikeinterface.extractors.NwbRecordingExtractor(
-            file_path=url, stream_mode="remfile", electrical_series_path=electrical_series_path
-        )
-        if extractor.get_sampling_frequency() > RATE_THRESHOLD_HZ:
-            return True
-    return False
+    return any(
+        _local_utils.is_above_rate_threshold(recording) for recording in _local_utils.get_acquisition_recordings(url)
+    )
 
 
 def main() -> None:
