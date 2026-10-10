@@ -11,7 +11,7 @@ size-capped error logs, the incremental frontier, the output paths and testing m
 `dandi_cache_utils`, which the runtime image carries.
 """
 
-import _ephys_recordings
+import _utils
 import dandi_cache_utils as dandi_cache
 
 #: The side output: which content IDs failed to be assessed, rather than failing to qualify.
@@ -36,7 +36,7 @@ def is_fast_enough_to_sort(recording, /) -> bool:
 
 def file_qualifies(url: str, /) -> bool:
     """Whether any acquisition ElectricalSeries in the file samples above the rate threshold."""
-    return any(is_fast_enough_to_sort(recording) for recording in _ephys_recordings.get_acquisition_recordings(url))
+    return any(is_fast_enough_to_sort(recording) for recording in _utils.get_acquisition_recordings(url))
 
 
 def main() -> None:
