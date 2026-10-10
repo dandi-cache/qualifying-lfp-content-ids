@@ -38,9 +38,6 @@ def get_acquisition_recordings(url: str, /) -> collections.abc.Iterator:
             )
 
 
-# Simple checks of one SpikeInterface recording, an ElectricalSeries of the file.
-
-
 def is_above_rate_threshold(recording, /) -> bool:
     """Whether the series samples above the rate threshold, rather than being LFP or similar."""
     return recording.get_sampling_frequency() > RATE_THRESHOLD_HZ
