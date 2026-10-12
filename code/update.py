@@ -39,7 +39,7 @@ def main() -> None:
     locations = dataset.read_input("content-id-to-nwb-file")
 
     assessed = dataset.read_output_lookup()
-    error_ids = dandi_cache.read_ids(dataset.output_file_path(ERROR_IDS))
+    error_ids = dataset.read_output_ids(ERROR_IDS)
 
     # A content ID whose assessment has already failed is left out rather than retried: the
     # failures here are properties of the file, so a retry spends the same stream to fail again.
@@ -72,7 +72,7 @@ def main() -> None:
         # `error_ids` is what keeps the item out of later runs instead.
         on_failure=dandi_cache.SKIP,
         on_error=lambda content_id, _item: error_ids.add(content_id),
-        on_write=lambda: dandi_cache.write_ids(dataset.output_file_path(ERROR_IDS), error_ids),
+        on_write=lambda: dataset.write_output_ids(error_ids, ERROR_IDS),
         stages=STAGES,
         describe=lambda qualifies: "qualifies" if qualifies else "does not qualify",
         checkpoint_every=50,
