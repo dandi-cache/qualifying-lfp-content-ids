@@ -10,5 +10,5 @@
 	branch = derivatives
 [submodule "workspace"]
 	path = workspace
-	url = .
+	url = ../qualifying-lfp-content-ids.git
 	datalad-url = https://github.com/dandi-cache/qualifying-lfp-content-ids.git
