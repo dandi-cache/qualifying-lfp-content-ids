@@ -105,3 +105,24 @@ import json, pathlib
 chunks = sorted(pathlib.Path("qualifying-lfp-content-ids/derivatives/qualifying_lfp_content_ids.zarr/stream/c").iterdir(), key=lambda path: int(path.name))
 qualifying_lfp_content_ids = {key: value for chunk in chunks for line in chunk.read_text().splitlines() if line for key, value in json.loads(line).items()}
 ```
+
+
+## Reading the `derivatives` branch
+
+Each output is kept on the `derivatives` branch as a [Zarr](https://zarr.dev/) v3 store of JSON Lines: a one-dimensional `uint8` array whose bytes are the lines, padded with newlines to the end of its last chunk.
+A key recorded more than once keeps its last line, which the dictionary below does by itself.
+
+```python
+import json
+
+import zarr  # zarr>=3, with fsspec and aiohttp to read over HTTP
+
+url = "https://raw.githubusercontent.com/dandi-cache/qualifying-lfp-content-ids/derivatives/derivatives/qualifying_lfp_content_ids.zarr"
+stream = zarr.open_group(url, mode="r")["stream"]
+lines = stream[:].tobytes().decode("utf-8").splitlines()
+qualifying_lfp_content_ids = {key: value for line in lines if line for key, value in json.loads(line).items()}
+```
+
+The other output, `error_ids.zarr`, is a store beside it under the same `derivatives/` path; its lines are bare IDs, so each `json.loads(line)` is a string rather than an object.
+
+Without Zarr, each chunk is a plain file of whole lines at `derivatives/qualifying_lfp_content_ids.zarr/stream/c/<n>`, read in order of `n`.
