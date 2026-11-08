@@ -1,0 +1,5 @@
+2026-11-08T22:14:34Z INFO Logging to /tmp/logs/update_2026-11-08T22-14-34Z.log.
+2026-11-08T22:14:34Z INFO Update qualifying-lfp-content-ids (base directory /tmp).
+2026-11-08T22:14:40Z INFO Processing 0 items (179985 already recorded).
+2026-11-08T22:14:42Z INFO Wrote 179985 records to /tmp/derivatives/qualifying_lfp_content_ids.zarr (0 new, 0 failed) in 0.0 min (peak memory 392 MiB).
+2026-11-08T22:14:42Z INFO Progress: 179,939 of 179,939 candidates recorded (100.0%).
