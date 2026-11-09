@@ -1,0 +1,25 @@
+2026-11-09T09:55:34Z INFO Logging to /tmp/logs/update_2026-11-09T09-55-34Z.log.
+2026-11-09T09:55:34Z INFO Update qualifying-lfp-content-ids (base directory /tmp).
+2026-11-09T09:55:40Z INFO Processing 20 items (180049 already recorded).
+2026-11-09T09:55:41Z INFO [1/20] 00ac9614-69b3-4558-bfae-0c74d02089d9: does not qualify; 1.3 s; peak memory 358 MiB.
+2026-11-09T09:55:42Z INFO [2/20] 025649ab-3e3b-496e-8139-77a352f82c92: does not qualify; 1.1 s; peak memory 358 MiB.
+2026-11-09T09:55:43Z INFO [3/20] 1723d371-8bd7-4a8b-8c98-76b1dd2552fd: does not qualify; 1.0 s; peak memory 358 MiB.
+2026-11-09T09:55:44Z INFO [4/20] 3fab99f0-6959-4f0b-96f7-bae3b160b6a4: does not qualify; 1.1 s; peak memory 358 MiB.
+2026-11-09T09:55:47Z INFO [5/20] 60514909-41ab-477b-9aad-bb7bf533d3c5: qualifies; 2.2 s; peak memory 358 MiB.
+2026-11-09T09:55:47Z INFO [6/20] 66947bb9-11b1-4482-82cd-4661124abc25: does not qualify; 1.0 s; peak memory 358 MiB.
+2026-11-09T09:55:49Z INFO [7/20] 71b7a48f-74d1-4399-9f56-49fcc80d388a: does not qualify; 1.1 s; peak memory 358 MiB.
+2026-11-09T09:55:50Z INFO [8/20] 8eacbc4b-2a7e-4d4e-b350-cd44ab320f87: does not qualify; 1.0 s; peak memory 358 MiB.
+2026-11-09T09:55:51Z INFO [9/20] 8ecaac06-0d16-44a1-8b96-fda4fa2f72ff: does not qualify; 1.0 s; peak memory 358 MiB.
+2026-11-09T09:55:52Z INFO [10/20] 900a6f1c-4cde-4ac3-9886-0cb5c402bd51: does not qualify; 1.1 s; peak memory 358 MiB.
+2026-11-09T09:55:53Z INFO [11/20] 904864dd-6d76-4a2b-bba0-54514be2ea35: does not qualify; 1.1 s; peak memory 358 MiB.
+2026-11-09T09:55:54Z INFO [12/20] 958fa158-66a4-4748-a398-11d3f60f152d: does not qualify; 1.0 s; peak memory 358 MiB.
+2026-11-09T09:55:55Z INFO [13/20] 9e4fca9a-7fbf-4c8a-a779-9bb8da5e0bbf: does not qualify; 1.0 s; peak memory 358 MiB.
+2026-11-09T09:55:57Z INFO [14/20] aa968347-f3ee-4382-9754-2364073dcc10: qualifies; 2.2 s; peak memory 358 MiB.
+2026-11-09T09:55:58Z INFO [15/20] ab4c4117-f9e6-4460-8884-d5d3820efaf5: does not qualify; 1.2 s; peak memory 358 MiB.
+2026-11-09T09:55:59Z INFO [16/20] aef586b8-44c5-4b5c-98a9-4a8dd3112201: does not qualify; 1.0 s; peak memory 358 MiB.
+2026-11-09T09:56:00Z INFO [17/20] c906e5a6-eea2-42a7-a35e-2a72f92c1c3e: does not qualify; 0.9 s; peak memory 358 MiB.
+2026-11-09T09:56:01Z INFO [18/20] d23fec2b-7414-40c3-a23d-6e59908cdf91: does not qualify; 1.0 s; peak memory 358 MiB.
+2026-11-09T09:56:03Z INFO [19/20] dd04a8e5-c142-4c38-89ad-d7e3a7cb2f17: qualifies; 2.4 s; peak memory 358 MiB.
+2026-11-09T09:56:04Z INFO [20/20] febd950e-9f57-4e45-8338-10c04dff0744: does not qualify; 1.1 s; peak memory 358 MiB.
+2026-11-09T09:56:07Z INFO Wrote 180069 records to /tmp/derivatives/qualifying_lfp_content_ids.zarr (20 new, 0 failed) in 0.4 min (peak memory 411 MiB).
+2026-11-09T09:56:07Z INFO Progress: 180,023 of 180,023 candidates recorded (100.0%).
