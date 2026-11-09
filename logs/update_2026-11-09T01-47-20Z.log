@@ -1,0 +1,70 @@
+2026-11-09T01:47:20Z INFO Logging to /tmp/logs/update_2026-11-09T01-47-20Z.log.
+2026-11-09T01:47:20Z INFO Update qualifying-lfp-content-ids (base directory /tmp).
+2026-11-09T01:47:24Z INFO Processing 64 items (179985 already recorded).
+2026-11-09T01:47:25Z INFO [1/64] 03f8d828-6857-4ba5-be2b-b5480bc84d10: does not qualify; 1.2 s; peak memory 358 MiB.
+2026-11-09T01:47:26Z INFO [2/64] 0d435891-0c9b-4b25-9ed6-573780cb6d6f: does not qualify; 0.9 s; peak memory 358 MiB.
+2026-11-09T01:47:27Z INFO [3/64] 135a71d7-fffd-4dd3-a48e-c1510c6d8e28: does not qualify; 0.9 s; peak memory 358 MiB.
+2026-11-09T01:47:28Z INFO [4/64] 154a5f34-1424-4f1d-a253-05d60ff188b2: does not qualify; 0.9 s; peak memory 358 MiB.
+2026-11-09T01:47:29Z INFO [5/64] 180f3478-bc15-449c-b411-1596cb053da3: does not qualify; 0.9 s; peak memory 358 MiB.
+2026-11-09T01:47:30Z INFO [6/64] 1a000f10-e32b-4cb3-8101-2cae64e20b4b: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:47:31Z INFO [7/64] 1d36ac63-b803-4bf1-b3e3-95905481e25f: does not qualify; 1.0 s; peak memory 358 MiB.
+2026-11-09T01:47:31Z INFO [8/64] 1dd50330-94d4-44dd-8482-aeacb3ffdfb1: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:47:32Z INFO [9/64] 2497bdfa-5f6d-4413-b42d-658298bc5572: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:47:33Z INFO [10/64] 25119dbc-e241-4ea8-bae4-eec0cb1949c5: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:47:34Z INFO [11/64] 26161375-940c-4db7-9d96-ab1ccfdc7163: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:47:35Z INFO [12/64] 285ea4d6-99c2-4a8e-b193-8b6f69209072: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:47:35Z INFO [13/64] 2899187d-aad9-4c9b-aca9-676b210e3e13: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:47:36Z INFO [14/64] 30668407-b53b-47e2-9ab5-787e4cc2dc24: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:47:37Z INFO [15/64] 36e8e022-9203-4e91-a120-1b292d5bc226: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:47:38Z INFO [16/64] 3ba2d3e2-29d6-48b7-a0a2-2f5075c50aed: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:47:39Z INFO [17/64] 3ba700c0-506f-4d55-a613-e497743c17c3: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:47:40Z INFO [18/64] 3c22957c-0011-428a-83ed-7bce1cf58298: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:47:40Z INFO [19/64] 3ccb467c-3852-4890-92e7-1f2f43a1da34: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:47:41Z INFO [20/64] 4573cf57-e6ac-4b62-99ff-ac2c43611167: does not qualify; 0.9 s; peak memory 358 MiB.
+2026-11-09T01:47:42Z INFO [21/64] 485005d5-9584-4fca-886a-4950debbd6c2: does not qualify; 0.9 s; peak memory 358 MiB.
+2026-11-09T01:47:43Z INFO [22/64] 48d142c1-b5ba-4bc5-9d9a-b7ff08c684ea: does not qualify; 0.9 s; peak memory 358 MiB.
+2026-11-09T01:47:44Z INFO [23/64] 4e67cf2f-712b-404c-bf8f-f7161da390e1: does not qualify; 0.9 s; peak memory 358 MiB.
+2026-11-09T01:47:45Z INFO [24/64] 5056b92a-4133-4e39-89a3-aa02d723d650: does not qualify; 0.9 s; peak memory 358 MiB.
+2026-11-09T01:47:46Z INFO [25/64] 52fef7ea-fe02-4649-8779-fae3991e13c3: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:47:47Z INFO [26/64] 568a0223-a521-4134-b5ba-1ec95924cdee: does not qualify; 1.0 s; peak memory 358 MiB.
+2026-11-09T01:47:47Z INFO [27/64] 5b3b7b5a-01c9-4b31-98b4-4fb98ee1ec92: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:47:48Z INFO [28/64] 5cd0b161-e89c-4acb-b48a-c854ea9e7e40: does not qualify; 1.0 s; peak memory 358 MiB.
+2026-11-09T01:47:49Z INFO [29/64] 5df5884d-e7d5-491d-98df-33060078b536: does not qualify; 0.9 s; peak memory 358 MiB.
+2026-11-09T01:47:50Z INFO [30/64] 6278a911-888d-4ed3-b20a-5a0198d03ed1: does not qualify; 0.9 s; peak memory 358 MiB.
+2026-11-09T01:47:51Z INFO [31/64] 651384d6-9582-40ba-960d-7eaef9a554df: does not qualify; 0.7 s; peak memory 358 MiB.
+2026-11-09T01:47:52Z INFO [32/64] 6c39ed2f-fa88-4259-a22a-9f19569a78f7: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:47:52Z INFO [33/64] 6e71cab1-d32d-43b3-8b82-6b7b2cfbdff2: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:47:53Z INFO [34/64] 70c63e8c-8ea2-4496-a186-76df94fa0f87: does not qualify; 0.9 s; peak memory 358 MiB.
+2026-11-09T01:47:54Z INFO [35/64] 722f970e-82ba-4d02-99d4-5383753fd486: does not qualify; 1.0 s; peak memory 358 MiB.
+2026-11-09T01:47:55Z INFO [36/64] 7636541d-8019-489f-aeea-c8130017883c: does not qualify; 0.9 s; peak memory 358 MiB.
+2026-11-09T01:47:56Z INFO [37/64] 80716dd9-063e-4309-b324-3e1820ac41ee: does not qualify; 0.9 s; peak memory 358 MiB.
+2026-11-09T01:47:57Z INFO [38/64] 80cb2e40-b1c7-417f-b696-68cb8efb42ae: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:47:58Z INFO [39/64] 842bb099-3777-4c81-b895-55ea8cfafd3d: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:47:59Z INFO [40/64] 8c326a03-360b-4fa8-9150-76ff056793c2: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:47:59Z INFO [41/64] 8c4d7512-c2b6-4e74-8ea1-d237b44d8365: does not qualify; 0.9 s; peak memory 358 MiB.
+2026-11-09T01:48:00Z INFO [42/64] 9391db03-70ed-4938-bdd4-df932c927e16: does not qualify; 0.9 s; peak memory 358 MiB.
+2026-11-09T01:48:01Z INFO [43/64] 959decc3-030d-4407-aedc-3108aab9886f: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:48:02Z INFO [44/64] 9d43fa08-9212-4e24-9138-6926109c7e9b: does not qualify; 1.0 s; peak memory 358 MiB.
+2026-11-09T01:48:03Z INFO [45/64] a2347186-bfed-41f2-b925-76da12f362db: does not qualify; 1.0 s; peak memory 358 MiB.
+2026-11-09T01:48:04Z INFO [46/64] a3bae1a0-fe77-40e5-9daa-7389300d7ba6: does not qualify; 1.0 s; peak memory 358 MiB.
+2026-11-09T01:48:05Z INFO [47/64] b0ca4fa2-64a1-4be3-b4a2-fec6400ef12e: does not qualify; 0.9 s; peak memory 358 MiB.
+2026-11-09T01:48:06Z INFO [48/64] b1b3dd06-1ddf-44e3-85bd-b8d7ed63e0c1: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:48:07Z INFO [49/64] b275d7f9-16bf-4785-8eef-1c536d432edd: does not qualify; 0.9 s; peak memory 358 MiB.
+2026-11-09T01:48:08Z INFO [50/64] b95476aa-8938-41b9-8047-d72e029d1940: does not qualify; 0.8 s; peak memory 358 MiB.
+2026-11-09T01:48:08Z INFO [50/64] b95476aa-8938-41b9-8047-d72e029d1940: checkpointed 180035 new records.
+2026-11-09T01:48:09Z INFO [51/64] be20d99c-f1bf-4d2c-86a4-e75c303cba97: does not qualify; 1.0 s; peak memory 409 MiB.
+2026-11-09T01:48:10Z INFO [52/64] c33c5bb2-cb09-4765-b1ba-bf162a3269db: does not qualify; 0.8 s; peak memory 409 MiB.
+2026-11-09T01:48:11Z INFO [53/64] c38498cf-9bf6-4310-864b-756beae0c83d: does not qualify; 0.8 s; peak memory 409 MiB.
+2026-11-09T01:48:12Z INFO [54/64] c88073ab-ed68-43bb-9120-cae93dffb0fc: does not qualify; 0.8 s; peak memory 409 MiB.
+2026-11-09T01:48:13Z INFO [55/64] c9cca054-bda8-4dd8-b125-851325c63945: does not qualify; 0.9 s; peak memory 409 MiB.
+2026-11-09T01:48:13Z INFO [56/64] cb45cceb-8dda-47f2-a0c9-4b2dc6d76753: does not qualify; 0.8 s; peak memory 409 MiB.
+2026-11-09T01:48:14Z INFO [57/64] cc1f381e-7396-4e22-b93a-042cbc23fa85: does not qualify; 0.8 s; peak memory 409 MiB.
+2026-11-09T01:48:15Z INFO [58/64] cf767f6a-d1c1-487b-a9ba-108f2664ec4c: does not qualify; 0.9 s; peak memory 409 MiB.
+2026-11-09T01:48:16Z INFO [59/64] d5af1abc-4300-4d67-854f-b35574859059: does not qualify; 0.8 s; peak memory 409 MiB.
+2026-11-09T01:48:17Z INFO [60/64] def97309-b71e-47e0-b8e8-159d52b9c6c5: does not qualify; 0.8 s; peak memory 409 MiB.
+2026-11-09T01:48:17Z INFO [61/64] e3b05650-7f57-4d9f-8d62-c568fa68d657: does not qualify; 0.7 s; peak memory 409 MiB.
+2026-11-09T01:48:18Z INFO [62/64] fa9e6e54-2f65-42ce-a308-5d340e83f7a5: does not qualify; 0.8 s; peak memory 409 MiB.
+2026-11-09T01:48:19Z INFO [63/64] fad9b663-5a72-4121-a41e-8943c8f838dd: does not qualify; 0.9 s; peak memory 409 MiB.
+2026-11-09T01:48:20Z INFO [64/64] fe40aed2-7617-435e-88ab-1e3d979499b2: does not qualify; 0.9 s; peak memory 409 MiB.
+2026-11-09T01:48:20Z INFO Wrote 180049 records to /tmp/derivatives/qualifying_lfp_content_ids.zarr (64 new, 0 failed) in 0.9 min (peak memory 409 MiB).
+2026-11-09T01:48:20Z INFO Progress: 180,003 of 180,003 candidates recorded (100.0%).
