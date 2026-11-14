@@ -1,0 +1,6 @@
+2026-11-14T20:48:41Z INFO Logging to /tmp/logs/update_2026-11-14T20-48-41Z.log.
+2026-11-14T20:48:41Z INFO Update qualifying-lfp-content-ids (base directory /tmp).
+2026-11-14T20:48:46Z INFO Processing 1 items (181227 already recorded).
+2026-11-14T20:48:49Z INFO [1/1] 3ec17381-ec49-4e88-9631-a1669f43fb7e: does not qualify; 2.6 s; peak memory 361 MiB.
+2026-11-14T20:48:51Z INFO Wrote 181228 records to /tmp/derivatives/qualifying_lfp_content_ids.zarr (1 new, 0 failed) in 0.0 min (peak memory 415 MiB).
+2026-11-14T20:48:51Z INFO Progress: 181,176 of 181,176 candidates recorded (100.0%).
